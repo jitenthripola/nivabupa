@@ -1,3 +1,11 @@
 {
-	"manuallyDisabled": false
+	"manuallyDisabled": false,
+	"cutoverAttemptedAtMs": 1791447136774,
+	"cutoverFence": {
+		"reason": "cutover to sqlite",
+		"at": "2026-10-08T08:12:16.788Z",
+		"tips": {
+			"/Users/jitendrasingh/Desktop/projects/nivabupa": "f0a6cd7aebee9b332fd949b9593961e4a02c0ae4"
+		}
+	}
 }
