@@ -1,7 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Check, Copy, ExternalLink, X, Smartphone, Globe, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import {
+  Check,
+  Copy,
+  X,
+  Smartphone,
+  Globe,
+  ExternalLink,
+  PlusSquare,
+  Share2,
+  AtSign,
+} from 'lucide-react';
 
 interface InstagramModalProps {
   isOpen: boolean;
@@ -16,7 +26,14 @@ export default function InstagramModal({
   onClose,
   onConfirmOpenApp,
 }: InstagramModalProps) {
-  const [copied, setCopied] = useState(true); // Automatically copied on open
+  const [copied, setCopied] = useState(true);
+  const [canShare, setCanShare] = useState(false);
+
+  useEffect(() => {
+    if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+      setCanShare(true);
+    }
+  }, []);
 
   if (!isOpen) return null;
 
@@ -30,11 +47,24 @@ export default function InstagramModal({
     }
   };
 
+  const handleNativeShare = async () => {
+    try {
+      await navigator.share({
+        title: 'Niva Bupa Claim Experience',
+        text: message,
+        url: 'https://www.instagram.com/nivabupa/',
+      });
+      onConfirmOpenApp();
+    } catch (err) {
+      console.warn('Native share dismissed or failed:', err);
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="relative w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-200">
-        {/* Top brand header */}
-        <div className="bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] p-5 text-white flex items-center justify-between">
+      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-200 max-h-[94vh] flex flex-col">
+        {/* Top Brand Header */}
+        <div className="bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCB045] p-5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center">
               <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
@@ -42,85 +72,133 @@ export default function InstagramModal({
               </svg>
             </div>
             <div>
-              <h3 className="text-base font-bold">Share to Instagram</h3>
-              <p className="text-xs text-white/90">2 quick steps</p>
+              <h3 className="text-base font-bold">Post on Instagram</h3>
+              <p className="text-xs text-white/90">Direct access &amp; instructions</p>
             </div>
           </div>
           <button
             onClick={onClose}
             className="w-8 h-8 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-white transition-colors cursor-pointer"
+            aria-label="Close"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Content body */}
-        <div className="p-5 sm:p-6 space-y-4">
-          {/* Step 1: Confirmation banner */}
+        {/* Modal Body */}
+        <div className="p-5 sm:p-6 space-y-4 overflow-y-auto">
+          {/* Clipboard Banner */}
           <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
                 <Check className="w-4 h-4 stroke-[3]" />
               </div>
-              <span className="text-sm font-semibold text-emerald-900">
-                Your message has been copied!
-              </span>
+              <div>
+                <span className="text-sm font-semibold text-emerald-900 block">
+                  Message copied to clipboard!
+                </span>
+                <span className="text-[11px] text-emerald-700">
+                  Ready to paste into your Instagram post caption
+                </span>
+              </div>
             </div>
             <button
               onClick={handleCopyAgain}
-              className="text-xs font-medium text-emerald-700 hover:text-emerald-900 flex items-center gap-1 cursor-pointer"
+              className="text-xs font-medium text-emerald-700 hover:text-emerald-900 flex items-center gap-1 cursor-pointer px-2.5 py-1 rounded-lg bg-emerald-100/60 hover:bg-emerald-200/60 transition-colors"
             >
               <Copy className="w-3.5 h-3.5" />
-              <span>{copied ? 'Copied' : 'Copy'}</span>
+              <span>{copied ? 'Copied' : 'Copy again'}</span>
             </button>
           </div>
 
-          {/* Snippet preview */}
-          <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 italic max-h-24 overflow-y-auto">
-            &ldquo;{message}&rdquo;
-          </div>
-
-          {/* Simple 2-Step Instructions */}
-          <div className="space-y-2.5 text-xs text-slate-600">
-            <div className="flex items-start gap-2.5">
-              <span className="w-5 h-5 rounded-full bg-sky-100 text-[#0077C8] font-bold flex items-center justify-center shrink-0">
-                1
-              </span>
-              <span>Tap below to open Instagram on your mobile app or browser.</span>
-            </div>
-            <div className="flex items-start gap-2.5">
-              <span className="w-5 h-5 rounded-full bg-sky-100 text-[#0077C8] font-bold flex items-center justify-center shrink-0">
-                2
-              </span>
-              <span>
-                Create a New Post or Story and <strong>Paste</strong> the copied text into your caption!
-              </span>
+          {/* Copied Text Preview */}
+          <div className="space-y-1">
+            <span className="text-xs font-semibold text-slate-700">Your Advocacy Caption:</span>
+            <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 italic max-h-20 overflow-y-auto whitespace-pre-wrap">
+              &ldquo;{message}&rdquo;
             </div>
           </div>
 
-          {/* Actions */}
-          <div className="space-y-2 pt-2">
-            <button
-              type="button"
-              onClick={onConfirmOpenApp}
-              className="w-full min-h-[48px] py-3 px-4 rounded-xl font-bold text-white bg-gradient-to-r from-[#E1306C] via-[#FD1D1D] to-[#FCB045] hover:opacity-95 shadow-md flex items-center justify-center gap-2 text-sm cursor-pointer"
-            >
-              <Smartphone className="w-4 h-4" />
-              <span>Open Instagram App</span>
-              <ArrowRight className="w-4 h-4 ml-1" />
-            </button>
+          {/* Explanation Box: Why Instagram doesn't show a post popup automatically */}
+          <div className="p-3.5 rounded-2xl bg-amber-50/90 border border-amber-200 space-y-2">
+            <div className="flex items-center gap-2 text-xs font-bold text-amber-900">
+              <PlusSquare className="w-4 h-4 text-amber-600" />
+              <span>How to create your post on Instagram:</span>
+            </div>
+            <p className="text-xs text-amber-800 leading-relaxed">
+              Instagram strictly restricts external websites from automatically triggering the &ldquo;New Post&rdquo; popup. Follow these steps:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs">
+              <div className="bg-white p-2.5 rounded-xl border border-amber-200/80 shadow-2xs">
+                <span className="font-bold text-slate-900 block mb-1">💻 On Computer:</span>
+                <p className="text-slate-600 text-[11px] leading-relaxed">
+                  In Instagram&apos;s left sidebar, click the{' '}
+                  <strong className="text-[#E1306C] bg-pink-50 px-1 py-0.5 rounded border border-pink-200">
+                    + Create
+                  </strong>{' '}
+                  button to open the post popup dialog.
+                </p>
+              </div>
+              <div className="bg-white p-2.5 rounded-xl border border-amber-200/80 shadow-2xs">
+                <span className="font-bold text-slate-900 block mb-1">📱 On Phone App:</span>
+                <p className="text-slate-600 text-[11px] leading-relaxed">
+                  Tap the{' '}
+                  <strong className="text-[#E1306C] bg-pink-50 px-1 py-0.5 rounded border border-pink-200">
+                    +
+                  </strong>{' '}
+                  icon at the bottom or top of your screen to create a post or story.
+                </p>
+              </div>
+            </div>
+          </div>
 
+          {/* Action Links - Native Anchor tags that can NEVER be blocked by popup blockers */}
+          <div className="space-y-2 pt-1 shrink-0">
+            {/* Native device share sheet (if supported) */}
+            {canShare && (
+              <button
+                type="button"
+                onClick={handleNativeShare}
+                className="w-full min-h-[46px] py-2.5 px-4 rounded-xl font-bold text-white bg-[#0A192F] hover:bg-[#1E293B] shadow-sm flex items-center justify-center gap-2 text-xs cursor-pointer transition-colors"
+              >
+                <Share2 className="w-4 h-4 text-sky-400" />
+                <span>Share via Phone / Device Share Sheet</span>
+              </button>
+            )}
+
+            {/* Direct Open Instagram Link - Native A tag guarantees it opens in new tab without popup blocker */}
             <a
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               onClick={onConfirmOpenApp}
-              className="w-full py-2.5 px-4 rounded-xl font-medium text-slate-600 hover:bg-slate-100 border border-slate-200 flex items-center justify-center gap-2 text-xs transition-colors"
+              className="w-full min-h-[48px] py-3 px-4 rounded-xl font-bold text-white bg-gradient-to-r from-[#E1306C] via-[#FD1D1D] to-[#FCB045] hover:opacity-95 shadow-md flex items-center justify-center gap-2 text-sm transition-opacity"
             >
-              <Globe className="w-3.5 h-3.5" />
-              <span>Or open in web browser (instagram.com)</span>
+              <Globe className="w-4 h-4" />
+              <span>Open Instagram (instagram.com)</span>
+              <ExternalLink className="w-4 h-4 ml-1 opacity-90" />
+            </a>
+
+            {/* Direct link to @nivabupa on Instagram */}
+            <a
+              href="https://www.instagram.com/nivabupa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onConfirmOpenApp}
+              className="w-full py-2.5 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-100 border border-slate-200 flex items-center justify-center gap-2 text-xs transition-colors"
+            >
+              <AtSign className="w-3.5 h-3.5 text-[#E1306C]" />
+              <span>Visit &amp; Tag @nivabupa on Instagram</span>
               <ExternalLink className="w-3.5 h-3.5 opacity-60" />
             </a>
+
+            <button
+              type="button"
+              onClick={onClose}
+              className="w-full py-2 px-4 rounded-xl font-medium text-slate-500 hover:bg-slate-100 flex items-center justify-center text-xs transition-colors cursor-pointer"
+            >
+              Cancel
+            </button>
           </div>
         </div>
       </div>

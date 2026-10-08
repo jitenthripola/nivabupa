@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ClaimSummaryCard from '@/components/ClaimSummaryCard';
@@ -11,7 +11,7 @@ import SuccessState from '@/components/SuccessState';
 import PostVerification from '@/components/PostVerification';
 import InstagramModal from '@/components/InstagramModal';
 import YouTubeModal from '@/components/YouTubeModal';
-import LoadingState from '@/components/LoadingState';
+import LinkedInModal from '@/components/LinkedInModal';
 import ErrorState from '@/components/ErrorState';
 import Footer from '@/components/Footer';
 import AnalyticsInspector from '@/components/AnalyticsInspector';
@@ -19,7 +19,7 @@ import { AnalyticsProvider, useAnalytics } from '@/components/AnalyticsProvider'
 
 import { MOCK_CLAIM_DATA, DEFAULT_SHARE_MESSAGE } from '@/lib/mockData';
 import { buildPlatformIntent } from '@/lib/shareUrls';
-import { SocialPlatform, ShareLinkResponse, VerificationResponse } from '@/types';
+import { SocialPlatform, ShareLinkResponse } from '@/types';
 
 function AdvocacyJourneyPage() {
   const { trackEvent, trackingToken } = useAnalytics();
@@ -30,6 +30,8 @@ function AdvocacyJourneyPage() {
   const [isShareLoading, setIsShareLoading] = useState<boolean>(false);
   const [shareError, setShareError] = useState<string | null>(null);
   const [hasSharedSuccessfully, setHasSharedSuccessfully] = useState<boolean>(false);
+  const [showLinkedInModal, setShowLinkedInModal] = useState<boolean>(false);
+  const [pendingLinkedInUrl, setPendingLinkedInUrl] = useState<string>('');
   const [showInstagramModal, setShowInstagramModal] = useState<boolean>(false);
   const [showYouTubeModal, setShowYouTubeModal] = useState<boolean>(false);
   const [generatedShareData, setGeneratedShareData] = useState<ShareLinkResponse | null>(null);
@@ -129,14 +131,31 @@ function AdvocacyJourneyPage() {
         return;
       }
 
-      // LinkedIn, X, Facebook
+      if (selectedPlatform === 'linkedin') {
+        const intent = buildPlatformIntent(
+          'linkedin',
+          shareData.shareUrl,
+          personalizedMessage
+        );
+        try {
+          await navigator.clipboard.writeText(personalizedMessage);
+        } catch (clipErr) {
+          console.warn('Clipboard write error:', clipErr);
+        }
+        setPendingLinkedInUrl(intent.intentUrl);
+        setIsShareLoading(false);
+        setShowLinkedInModal(true);
+        return;
+      }
+
+      // X, Facebook
       const intent = buildPlatformIntent(
         selectedPlatform,
         shareData.shareUrl,
         personalizedMessage
       );
 
-      // If clipboard copy is beneficial (e.g. LinkedIn or Facebook)
+      // If clipboard copy is beneficial (e.g. Facebook)
       if (intent.requiresClipboardCopy) {
         try {
           await navigator.clipboard.writeText(personalizedMessage);
@@ -145,17 +164,8 @@ function AdvocacyJourneyPage() {
         }
       }
 
-      // Open sharing dialog in new window
-      const popupWindow = window.open(
-        intent.intentUrl,
-        '_blank',
-        'noopener,noreferrer,width=640,height=620'
-      );
-
-      // Fallback if popup blocker intercepted
-      if (!popupWindow || popupWindow.closed || typeof popupWindow.closed === 'undefined') {
-        window.location.href = intent.intentUrl;
-      }
+      // Open strictly in a new tab without ever replacing the current page
+      openUrlInNewTab(intent.intentUrl);
 
       setIsShareLoading(false);
       setHasSharedSuccessfully(true);
@@ -173,16 +183,31 @@ function AdvocacyJourneyPage() {
     }
   };
 
+  // Safely open any URL in a single new browser tab
+  const openUrlInNewTab = (url: string) => {
+    if (typeof window === 'undefined' || !url) return;
+    window.open(url, '_blank');
+  };
+
+  // LinkedIn confirm handler
+  const handleLinkedInConfirmed = () => {
+    setShowLinkedInModal(false);
+    setHasSharedSuccessfully(true);
+    trackEvent('share_completed', 'linkedin', {
+      mode: 'web_intent',
+      shareUrl: pendingLinkedInUrl,
+    });
+
+    if (pendingLinkedInUrl) {
+      openUrlInNewTab(pendingLinkedInUrl);
+    }
+  };
+
   // Instagram confirm handler
   const handleInstagramConfirmed = () => {
     setShowInstagramModal(false);
     setHasSharedSuccessfully(true);
     trackEvent('share_completed', 'instagram', { mode: 'app_deep_link' });
-
-    // Attempt mobile protocol first, fallback to web
-    if (typeof window !== 'undefined') {
-      window.open('https://www.instagram.com', '_blank', 'noopener,noreferrer');
-    }
   };
 
   // YouTube confirm handler
@@ -191,9 +216,7 @@ function AdvocacyJourneyPage() {
     setHasSharedSuccessfully(true);
     trackEvent('share_completed', 'youtube', { mode: 'studio_upload' });
 
-    if (typeof window !== 'undefined') {
-      window.open('https://www.youtube.com/upload', '_blank', 'noopener,noreferrer');
-    }
+    openUrlInNewTab('https://www.youtube.com/upload');
   };
 
   const handleScrollToVerification = () => {
@@ -208,10 +231,10 @@ function AdvocacyJourneyPage() {
       {/* Main Single Page Content Container */}
       <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6 sm:space-y-8">
         {/* Verified Claim Summary Bar */}
-        <ClaimSummaryCard claim={MOCK_CLAIM_DATA} />
+        {/* <ClaimSummaryCard claim={MOCK_CLAIM_DATA} /> */}
 
         {/* Hero & Appreciation Section */}
-        <HeroSection onShareClick={handleScrollToSharing} />
+        {/* <HeroSection onShareClick={handleScrollToSharing} /> */}
 
         {/* Main Sharing Interaction Card */}
         <div
@@ -280,6 +303,13 @@ function AdvocacyJourneyPage() {
       </main>
 
       {/* Platform Modals */}
+      <LinkedInModal
+        isOpen={showLinkedInModal}
+        message={personalizedMessage}
+        onClose={() => setShowLinkedInModal(false)}
+        onConfirmOpenLinkedIn={handleLinkedInConfirmed}
+      />
+
       <InstagramModal
         isOpen={showInstagramModal}
         message={personalizedMessage}
@@ -295,7 +325,7 @@ function AdvocacyJourneyPage() {
       />
 
       {/* Real-time Tracking & Audit Inspector Drawer */}
-      <AnalyticsInspector />
+      {/* <AnalyticsInspector /> */}
 
       {/* Footer */}
       <Footer />

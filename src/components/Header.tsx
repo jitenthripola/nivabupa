@@ -53,7 +53,7 @@ export default function Header() {
         </div>
 
         {/* Security & Regulatory Indicator */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        {/* <div className="flex items-center gap-2 sm:gap-3">
           <div className="flex items-center gap-1.5 text-xs text-slate-600 bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200">
             <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
             <span className="hidden sm:inline font-medium">IRDAI Reg. No. 145</span>
@@ -64,7 +64,7 @@ export default function Header() {
             <Lock className="w-3.5 h-3.5 text-slate-400" />
             <span>256-Bit SSL Encrypted</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </header>
   );

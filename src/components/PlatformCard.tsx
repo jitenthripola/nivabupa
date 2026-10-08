@@ -60,11 +60,10 @@ export default function PlatformCard({
       id={`platform-btn-${platform.id}`}
       aria-label={`Share on ${platform.name}`}
       aria-pressed={isSelected}
-      className={`group relative flex flex-col items-center justify-center p-4 rounded-2xl transition-all duration-200 cursor-pointer text-center select-none outline-hidden focus-visible:ring-4 focus-visible:ring-sky-200 ${
-        isSelected
+      className={`group relative flex flex-col items-center justify-center p-4 rounded-2xl transition-all duration-200 cursor-pointer text-center select-none outline-hidden focus-visible:ring-4 focus-visible:ring-sky-200 ${isSelected
           ? 'bg-gradient-to-b from-sky-50/90 to-blue-50/70 border-2 border-[#009FE3] shadow-md shadow-sky-500/15 translate-y-[-2px]'
           : 'bg-white border border-slate-200 hover:border-sky-300 hover:bg-slate-50/70 hover:shadow-xs'
-      }`}
+        }`}
     >
       {/* Selection indicator pill */}
       {isSelected && (
@@ -75,11 +74,10 @@ export default function PlatformCard({
 
       {/* Platform Icon with brand accent tint on hover/active */}
       <div
-        className={`w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-200 group-hover:scale-105 ${
-          isSelected
+        className={`w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-200 group-hover:scale-105 ${isSelected
             ? 'bg-white shadow-xs text-[#009FE3]'
             : 'bg-slate-100 text-slate-700 group-hover:bg-sky-50 group-hover:text-[#0077C8]'
-        }`}
+          }`}
         style={isSelected ? { color: platform.brandColor } : undefined}
       >
         {renderIcon()}
@@ -87,9 +85,8 @@ export default function PlatformCard({
 
       {/* Platform Name */}
       <span
-        className={`mt-2.5 text-sm font-bold tracking-tight transition-colors ${
-          isSelected ? 'text-[#0A192F]' : 'text-slate-700 group-hover:text-slate-900'
-        }`}
+        className={`mt-2.5 text-sm font-bold tracking-tight transition-colors ${isSelected ? 'text-[#0A192F]' : 'text-slate-700 group-hover:text-slate-900'
+          }`}
       >
         {platform.name}
       </span>

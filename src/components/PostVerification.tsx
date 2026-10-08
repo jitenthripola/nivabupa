@@ -151,11 +151,10 @@ export default function PostVerification({
                 id="post-url-input"
                 placeholder="Paste your post URL (e.g. https://www.linkedin.com/posts/...)"
                 aria-label="Paste your post URL"
-                className={`w-full min-h-[48px] px-4 py-3 rounded-xl border text-sm text-slate-900 bg-slate-50/50 placeholder:text-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 transition-all ${
-                  validationError
+                className={`w-full min-h-[48px] px-4 py-3 rounded-xl border text-sm text-slate-900 bg-slate-50/50 placeholder:text-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 transition-all ${validationError
                     ? 'border-red-400 focus:ring-red-200'
                     : 'border-slate-300 focus:border-[#009FE3] focus:ring-sky-100'
-                }`}
+                  }`}
               />
             </div>
 

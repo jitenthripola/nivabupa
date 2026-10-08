@@ -1,0 +1,790 @@
+[2026-10-06T05:33:40.551Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:40.551Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-06T05:33:40.551Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-06T05:33:40.551Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-06T05:33:40.551Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-06T05:33:40.561Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:40.658Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:40.706Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:40.772Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:41.434Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:41.442Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:41.446Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-06T05:33:41.508Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:33:41.532Z] INFO  [RepoProfile] manual-disable MIGRATE → manuallyDisabled=false (pid=5154, profile=/Users/jitendrasingh/Desktop/projects/new/.jolli/jollimemory/profile.json, fence=none, from=legacy-marker) ←  at wY (/Users/jitendrasingh/.vscode/extensions/jolli.jollimemory-vscode-0.99.18/dist/Extension.js:117:909) | at /Users/jitendrasingh/.vscode/extensions/jolli.jollimemory-vscode-0.99.18/dist/Extension.js:118:953 | at Ef (/Users/jitendrasingh/.vscode/extensions/jolli.jollimemory-vscode-0.99.18/dist/Extension.js:3:5846) | at fY (/Users/jitendrasingh/.vscode/extensions/jolli.jollimemory-vscode-0.99.18/dist/Extension.js:118:572) | at yo (/Users/jitendrasingh/.vscode/extensions/jolli.jollimemory-vscode-0.99.18/dist/Extension.js:118:475) | at t.refreshHookPathsIfStale (/Users/jitendrasingh/.vscode/extensions/jolli.jollimemory-vscode-0.99.18/dist/Extension.js:4026:18339)
+[2026-10-06T05:33:41.600Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:41.600Z] INFO  [RepoProfile] manual-disable read → false (by=migrate:legacy-marker, pid=5154, cwd=/Users/jitendrasingh/Desktop/projects/new, profile=/Users/jitendrasingh/Desktop/projects/new/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=undefined fence=none)
+[2026-10-06T05:33:41.600Z] INFO  [bridge] Own dist-paths/vscode missing, stale, or pointing elsewhere — re-enabling
+[2026-10-06T05:33:41.600Z] INFO  [bridge] enable() called
+[2026-10-06T05:33:41.601Z] INFO  [Installer] Installing Jolli Memory hooks
+[2026-10-06T05:33:41.602Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-06T05:33:41.676Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:41.713Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:41.715Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-06T05:33:41.829Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:41.842Z] INFO  [DispatchScripts] Wrote resolve-dist-path, run-hook, and run-cli scripts to /Users/jitendrasingh/.jolli/jollimemory
+[2026-10-06T05:33:41.846Z] INFO  [DistPathWriter] Wrote dist-paths/vscode (version=0.99.18, distDir=/Users/jitendrasingh/.vscode/extensions/jolli.jollimemory-vscode-0.99.18/dist)
+[2026-10-06T05:33:41.855Z] INFO  [SchemaV5Migration] Storage backend not initialized yet — skipping schema v5 migration (no data to migrate)
+[2026-10-06T05:33:41.855Z] INFO  [activate] Schema v5 migration: alreadyDone=false fresh=true migrated=0 skipped=0
+[2026-10-06T05:33:41.914Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:41.928Z] INFO  [SkillInstaller] Wrote SKILL.md (revision 3) to /Users/jitendrasingh/Desktop/projects/new/.agents/skills/jolli-recall/SKILL.md
+[2026-10-06T05:33:41.930Z] INFO  [SkillInstaller] Wrote SKILL.md (revision 3) to /Users/jitendrasingh/Desktop/projects/new/.agents/skills/jolli-search/SKILL.md
+[2026-10-06T05:33:41.937Z] INFO  [SkillInstaller] Wrote SKILL.md (revision 6) to /Users/jitendrasingh/Desktop/projects/new/.agents/skills/jolli-local-run/SKILL.md
+[2026-10-06T05:33:41.940Z] INFO  [SkillInstaller] Wrote SKILL.md (revision 5) to /Users/jitendrasingh/Desktop/projects/new/.agents/skills/jolli-remote-run/SKILL.md
+[2026-10-06T05:33:41.947Z] INFO  [SkillInstaller] Wrote SKILL.md (revision 9) to /Users/jitendrasingh/Desktop/projects/new/.agents/skills/jolli/SKILL.md
+[2026-10-06T05:33:41.995Z] INFO  [GitExclude] Updated /Users/jitendrasingh/Desktop/projects/new/.git/info/exclude with 8 Jolli skill exclude paths
+[2026-10-06T05:33:41.996Z] INFO  [McpRegistration] Registered MCP server in /Users/jitendrasingh/Desktop/projects/new/.mcp.json
+[2026-10-06T05:33:41.998Z] INFO  [JsonMcpWriter] Registered MCP server in /Users/jitendrasingh/Desktop/projects/new/.cursor/mcp.json
+[2026-10-06T05:33:41.999Z] INFO  [JsonMcpWriter] MCP server already registered in /Users/jitendrasingh/.gemini/settings.json — no write needed
+[2026-10-06T05:33:42.000Z] INFO  [CodexTomlWriter] Registered Codex MCP server in /Users/jitendrasingh/.codex/config.toml
+[2026-10-06T05:33:42.001Z] INFO  [JsonMcpWriter] MCP server already registered in /Users/jitendrasingh/Library/Application Support/Code/User/mcp.json — no write needed
+[2026-10-06T05:33:42.002Z] INFO  [JsonMcpWriter] MCP server already registered in /Users/jitendrasingh/.config/devin/config.json — no write needed
+[2026-10-06T05:33:42.002Z] INFO  [JsonMcpWriter] MCP server already registered in /Users/jitendrasingh/.gemini/config/mcp_config.json — no write needed
+[2026-10-06T05:33:42.002Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:42.003Z] INFO  [GitHookInstaller] Git post-commit hook installed
+[2026-10-06T05:33:42.003Z] INFO  [GitHookInstaller] Git post-rewrite hook installed
+[2026-10-06T05:33:42.004Z] INFO  [GitHookInstaller] Git prepare-commit-msg hook installed
+[2026-10-06T05:33:42.004Z] INFO  [GitHookInstaller] Git post-merge hook installed
+[2026-10-06T05:33:42.004Z] INFO  [GitHookInstaller] Git pre-push hook installed
+[2026-10-06T05:33:42.005Z] INFO  [GeminiHookInstaller] Gemini AfterAgent hook installed
+[2026-10-06T05:33:42.005Z] INFO  [Installer] Skipping v5 migration on vscode-extension source — Extension.ts owns it with UI
+[2026-10-06T05:33:42.005Z] INFO  [Installer] Installation complete
+[2026-10-06T05:33:42.005Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:33:42.039Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:42.166Z] INFO  [Installer] Status: enabled=false, claude=false, git=false, geminiHook=false, hermesHook=false, worktreeHooks=false, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:33:42.169Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:42.170Z] INFO  [initialLoad] All panels loaded — updating status bar
+[2026-10-06T05:33:42.170Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:33:42.324Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:33:42.327Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:33:42.328Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-06T05:33:42.328Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-06T05:33:42.328Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-06T05:33:42.328Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-06T05:33:42.333Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:42.334Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:33:42.334Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:42.391Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:42.391Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:42.518Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:33:42.563Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:42.565Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-06T05:33:42.934Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:33:42.934Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:33:42.957Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:33:42.991Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:43.140Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:33:43.314Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:33:43.317Z] INFO  [RepoProfile] manual-disable read → false (by=manuallyDisabled, pid=5154, cwd=/Users/jitendrasingh/Desktop/projects/new, profile=/Users/jitendrasingh/Desktop/projects/new/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=none)
+[2026-10-06T05:34:40.414Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:35:40.415Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:36:40.421Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:37:38.023Z] INFO  [deactivate] Jolli Memory extension deactivating
+[2026-10-06T05:38:08.273Z] INFO  [activate] Activating JolliMemory extension {"workspaceRoot":"/Users/jitendrasingh/Desktop/projects/new","extensionPath":"/Users/jitendrasingh/.antigravity-ide/extensions/jolli.jollimemory-vscode-0.99.18-universal"}
+[2026-10-06T05:38:08.361Z] INFO  [initialLoad] Loading all panels
+[2026-10-06T05:38:08.412Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.413Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.413Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.413Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.415Z] INFO  [RepoProfile] manual-disable read → false (by=manuallyDisabled, pid=9301, cwd=/Users/jitendrasingh/Desktop/projects/new, profile=/Users/jitendrasingh/Desktop/projects/new/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=none)
+[2026-10-06T05:38:08.416Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.416Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.417Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-06T05:38:08.417Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-06T05:38:08.417Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-06T05:38:08.417Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-06T05:38:08.417Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.528Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.596Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.615Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.948Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:08.957Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-06T05:38:09.136Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:38:09.136Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:38:09.276Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:09.287Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-06T05:38:09.493Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:09.493Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:09.493Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:09.496Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-06T05:38:09.690Z] INFO  [SchemaV5Migration] Storage backend not initialized yet — skipping schema v5 migration (no data to migrate)
+[2026-10-06T05:38:09.690Z] INFO  [activate] Schema v5 migration: alreadyDone=false fresh=true migrated=0 skipped=0
+[2026-10-06T05:38:09.766Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:10.227Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:38:10.241Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:10.242Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:38:10.284Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:38:10.285Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:10.285Z] INFO  [initialLoad] All panels loaded — updating status bar
+[2026-10-06T05:38:10.286Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:38:10.507Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:10.551Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:10.943Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:38:10.944Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-06T05:38:11.088Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:38:11.115Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:11.121Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-06T05:38:11.345Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:38:11.524Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-06T05:39:08.281Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:40:08.284Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:41:08.208Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:42:08.213Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:43:08.218Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:44:08.220Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:45:08.225Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:46:08.237Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:47:08.231Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:48:08.236Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:49:08.237Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:50:08.237Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:51:08.241Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:52:08.245Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:53:08.249Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:54:08.255Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:55:08.260Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:56:08.266Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:57:08.145Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:58:08.148Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T05:59:08.152Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:00:08.157Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:01:08.159Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:02:08.161Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:03:08.164Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:04:08.160Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:05:08.161Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:06:08.164Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:07:08.164Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:08:08.161Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:09:08.167Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:10:08.170Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:11:08.171Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:12:08.174Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:13:08.194Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:14:08.214Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:15:08.213Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:16:08.217Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:17:08.221Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:18:08.222Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:19:08.219Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:20:08.223Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:21:08.225Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:22:08.226Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:23:08.230Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:24:08.236Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:25:08.238Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:26:08.242Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:27:08.244Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:28:08.247Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:29:08.248Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:30:08.250Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:31:08.252Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:32:08.252Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:33:08.256Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:34:08.255Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:35:08.255Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:36:08.257Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:37:08.257Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:38:08.260Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:39:08.261Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:40:08.261Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:41:08.259Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:42:08.262Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:43:08.262Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:44:08.273Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:45:08.218Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:46:08.228Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:47:08.224Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:48:08.223Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:49:08.227Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:50:08.229Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:51:08.232Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:52:08.232Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:53:08.235Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:54:08.239Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:55:08.244Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:56:08.237Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:57:08.241Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:58:08.240Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T06:59:08.241Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:00:08.244Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:01:08.268Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:02:08.285Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:03:08.289Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:04:08.292Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:05:08.295Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:06:08.304Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:07:08.311Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:08:08.319Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:09:08.326Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:10:08.329Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:11:08.339Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:12:08.346Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:13:08.349Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:14:08.356Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:15:08.362Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:16:08.366Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:17:08.371Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:18:08.375Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:19:08.384Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:20:08.389Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:21:08.391Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:22:08.399Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:23:08.402Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:24:08.407Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:25:08.411Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:26:08.412Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:27:08.417Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:28:08.420Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:29:08.428Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:30:08.436Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:31:08.440Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:32:08.441Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:33:08.429Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:34:08.419Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:35:08.428Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:36:08.435Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:37:08.443Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:38:08.448Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:39:08.457Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:40:08.460Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:41:08.464Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:42:08.465Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:43:08.465Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:44:08.469Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:45:08.471Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:46:08.474Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:47:08.478Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:48:08.479Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:49:08.463Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:50:08.450Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:51:08.454Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:52:08.458Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:53:08.458Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:54:08.458Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:55:08.466Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:56:08.473Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:57:08.478Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:58:08.487Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T07:59:08.494Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:00:08.502Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:01:08.509Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:02:08.508Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:03:08.510Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:04:08.516Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:05:08.530Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:06:08.546Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:07:08.554Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:08:08.552Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:09:08.554Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:10:08.564Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:11:08.570Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:12:08.584Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:13:08.572Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:14:08.580Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:15:08.584Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:16:08.584Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:17:08.588Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:18:08.583Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:19:08.586Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-06T08:20:08.587Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:18.641Z] INFO  [activate] Activating JolliMemory extension {"workspaceRoot":"/Users/jitendrasingh/Desktop/projects/new","extensionPath":"/Users/jitendrasingh/.antigravity-ide/extensions/jolli.jollimemory-vscode-0.99.18-universal"}
+[2026-10-07T11:04:19.081Z] WARN  [activate] Could not resolve git HEAD path — branch-switch auto-refresh disabled
+[2026-10-07T11:04:19.169Z] WARN  [activate] Could not resolve orphan ref path — memory-finished auto-refresh disabled
+[2026-10-07T11:04:19.172Z] INFO  [initialLoad] Loading all panels
+[2026-10-07T11:04:19.231Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:19.231Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:19.231Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:19.231Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:19.234Z] INFO  [RepoProfile] manual-disable read → false (by=manuallyDisabled, pid=1942, cwd=/Users/jitendrasingh/Desktop/projects/new, profile=/Users/jitendrasingh/Desktop/projects/new/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=none)
+[2026-10-07T11:04:19.236Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:19.236Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:19.238Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-07T11:04:19.238Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-07T11:04:19.238Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-07T11:04:19.238Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-07T11:04:19.241Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:19.245Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:19.387Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:04:19.545Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:19.648Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:04:19.648Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-07T11:04:19.759Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-07T11:04:19.760Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-07T11:04:19.760Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-07T11:04:19.911Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:19.925Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:19.929Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:19.931Z] ERROR [initialLoad] Failed to load panels {"code":69,"killed":false,"signal":null,"cmd":"git rev-parse HEAD","stdout":"","stderr":"You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.\n"}
+[2026-10-07T11:04:19.932Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:20.099Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:20.117Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:20.123Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:04:20.123Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-07T11:04:20.213Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-07T11:04:20.215Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:04:20.215Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-07T11:04:20.317Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-07T11:04:20.318Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:20.319Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:20.412Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:20.413Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:20.537Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:04:20.537Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-07T11:04:20.816Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-07T11:04:20.819Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:20.973Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:21.355Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:21.357Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-07T11:04:21.371Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:21.539Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:22.323Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:23.094Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:23.510Z] INFO  [SchemaV5Migration] Storage backend not initialized yet — skipping schema v5 migration (no data to migrate)
+[2026-10-07T11:04:23.510Z] INFO  [activate] Schema v5 migration: alreadyDone=false fresh=true migrated=0 skipped=0
+[2026-10-07T11:04:23.780Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-07T11:04:23.781Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:23.782Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:23.782Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-07T11:04:23.878Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:04:23.880Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:23.992Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:24.240Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:24.328Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-07T11:04:24.330Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-07T11:04:24.457Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:24.559Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:04:24.795Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:04:24.891Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=1, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-07T11:05:18.649Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:06:18.649Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:07:18.651Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:08:18.648Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:09:18.649Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:10:18.653Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:11:18.653Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:12:18.650Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:13:18.648Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:14:18.645Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:15:18.646Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:16:18.648Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:17:18.644Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:18:18.644Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:19:18.642Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:20:18.641Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:21:18.645Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:22:18.652Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:23:18.653Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:24:18.652Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:25:18.654Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:26:18.648Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:27:18.652Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:28:18.651Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:29:18.651Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:30:18.651Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:31:18.655Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:32:18.655Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:33:18.655Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:34:18.656Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:35:18.657Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:36:18.655Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:18.657Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:53.864Z] INFO  [activate] Activating JolliMemory extension {"workspaceRoot":"/Users/jitendrasingh/Desktop/projects/new","extensionPath":"/Users/jitendrasingh/.antigravity-ide/extensions/jolli.jollimemory-vscode-0.99.18-universal"}
+[2026-10-07T11:37:54.418Z] WARN  [activate] Could not resolve git HEAD path — branch-switch auto-refresh disabled
+[2026-10-07T11:37:54.510Z] WARN  [activate] Could not resolve orphan ref path — memory-finished auto-refresh disabled
+[2026-10-07T11:37:54.513Z] INFO  [initialLoad] Loading all panels
+[2026-10-07T11:37:54.566Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:54.566Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:54.566Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:54.566Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:54.566Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:54.572Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:54.572Z] INFO  [RepoProfile] manual-disable read → false (by=manuallyDisabled, pid=4543, cwd=/Users/jitendrasingh/Desktop/projects/new, profile=/Users/jitendrasingh/Desktop/projects/new/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=none)
+[2026-10-07T11:37:54.575Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-07T11:37:54.575Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-07T11:37:54.575Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-07T11:37:54.575Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-07T11:37:54.579Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:54.586Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:54.948Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:37:54.949Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:55.045Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:37:55.046Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-07T11:37:55.157Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-07T11:37:55.157Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-07T11:37:55.157Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-07T11:37:55.351Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:55.366Z] ERROR [initialLoad] Failed to load panels {"code":69,"killed":false,"signal":null,"cmd":"git rev-parse HEAD","stdout":"","stderr":"You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.\n"}
+[2026-10-07T11:37:55.367Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:55.374Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:55.378Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:55.499Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:55.510Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:37:55.511Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-07T11:37:55.606Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-07T11:37:55.607Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:37:55.607Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-07T11:37:55.705Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-07T11:37:55.706Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:55.706Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:55.707Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:55.846Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:55.847Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:56.007Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:37:56.007Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-07T11:37:56.246Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-07T11:37:56.252Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:56.456Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:56.582Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:56.583Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=2, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-07T11:37:56.584Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:56.585Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-07T11:37:56.703Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=2, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-07T11:37:56.703Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:56.709Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:56.715Z] INFO  [SchemaV5Migration] Storage backend not initialized yet — skipping schema v5 migration (no data to migrate)
+[2026-10-07T11:37:56.715Z] INFO  [activate] Schema v5 migration: alreadyDone=false fresh=true migrated=0 skipped=0
+[2026-10-07T11:37:57.058Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:57.060Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:57.526Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-07T11:37:57.827Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:57.927Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=2, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-07T11:37:57.928Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-07T11:37:58.032Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:58.170Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:37:58.472Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-07T11:37:58.581Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=2, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-07T11:38:53.868Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:39:53.869Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:40:19.781Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:40:53.867Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:41:53.870Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:42:53.872Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:43:53.873Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:44:53.872Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:45:53.871Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:46:53.877Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:47:53.880Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:48:53.886Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:49:53.893Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:50:53.891Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:51:53.899Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:52:53.899Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:53:53.906Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:54:53.904Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:55:53.914Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:56:53.914Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:57:53.917Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:58:43.749Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:58:44.174Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:58:44.592Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:58:53.914Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T11:59:53.913Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:00:53.913Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:01:53.915Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:02:53.918Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:03:53.921Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:04:53.921Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:05:53.931Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:06:53.927Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:07:53.925Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:08:53.924Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:09:53.923Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:10:53.925Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:11:53.926Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:12:53.928Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:13:53.930Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:14:53.932Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:15:53.931Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:16:53.932Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:17:31.260Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:17:53.935Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:18:53.935Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:19:53.939Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:20:53.939Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:21:53.951Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:22:53.958Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:23:53.958Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:24:53.960Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:25:53.966Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:26:53.971Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:27:53.971Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:28:53.971Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:29:53.975Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:30:53.981Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:31:53.982Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:32:53.986Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:33:53.994Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:34:54.001Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:35:54.003Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:36:54.004Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:37:54.007Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:38:54.016Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:39:54.024Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:40:54.021Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:41:54.024Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:42:54.027Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:43:54.024Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:44:54.027Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:45:54.028Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:46:54.031Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:47:54.029Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-07T12:48:54.030Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:55.914Z] INFO  [activate] Activating JolliMemory extension {"workspaceRoot":"/Users/jitendrasingh/Desktop/projects/new","extensionPath":"/Users/jitendrasingh/.antigravity-ide/extensions/jolli.jollimemory-vscode-0.99.18-universal"}
+[2026-10-08T07:12:56.168Z] WARN  [activate] Could not resolve git HEAD path — branch-switch auto-refresh disabled
+[2026-10-08T07:12:56.222Z] WARN  [activate] Could not resolve orphan ref path — memory-finished auto-refresh disabled
+[2026-10-08T07:12:56.224Z] INFO  [initialLoad] Loading all panels
+[2026-10-08T07:12:56.285Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:56.285Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:56.285Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:56.285Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:56.285Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:56.300Z] INFO  [RepoProfile] manual-disable read → false (by=manuallyDisabled, pid=9497, cwd=/Users/jitendrasingh/Desktop/projects/new, profile=/Users/jitendrasingh/Desktop/projects/new/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=none)
+[2026-10-08T07:12:56.302Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:56.307Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-08T07:12:56.307Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-08T07:12:56.307Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-08T07:12:56.307Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-08T07:12:56.307Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:56.609Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:56.784Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:56.786Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:57.072Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:12:57.087Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:57.252Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:12:57.252Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-08T07:12:57.370Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-08T07:12:57.370Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:12:57.371Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:12:57.375Z] ERROR [initialLoad] Failed to load panels {"code":69,"killed":false,"signal":null,"cmd":"git rev-parse HEAD","stdout":"","stderr":"You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.\n"}
+[2026-10-08T07:12:57.379Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:57.461Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:57.472Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:12:57.472Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-08T07:12:57.540Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-08T07:12:57.545Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:57.545Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:57.546Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:57.655Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:57.656Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:12:57.656Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-08T07:12:57.712Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-08T07:12:57.715Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:57.715Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:57.790Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:57.791Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:58.015Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:12:58.015Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/new
+[2026-10-08T07:12:58.241Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/new — using orphan-only storage
+[2026-10-08T07:12:58.251Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:58.338Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:58.462Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:58.464Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=3, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:12:58.476Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:58.477Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:12:58.731Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=3, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:12:58.732Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:58.735Z] INFO  [SchemaV5Migration] Storage backend not initialized yet — skipping schema v5 migration (no data to migrate)
+[2026-10-08T07:12:58.735Z] INFO  [activate] Schema v5 migration: alreadyDone=false fresh=true migrated=0 skipped=0
+[2026-10-08T07:12:59.026Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:59.026Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:59.133Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:12:59.135Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:59.290Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:59.354Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=3, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:12:59.355Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:12:59.452Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:59.523Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:12:59.675Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:12:59.749Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=3, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:13:55.921Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:14:55.919Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:15:55.918Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:16:55.918Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:17:55.917Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:18:55.919Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:18:58.109Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:19:55.922Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:20:55.921Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:21:55.920Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:22:55.921Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:23:55.916Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:24:55.913Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:25:55.914Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:26:55.914Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:27:55.910Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:06.862Z] INFO  [activate] Activating JolliMemory extension {"workspaceRoot":"/Users/jitendrasingh/Desktop/projects/nivabupa","extensionPath":"/Users/jitendrasingh/.antigravity-ide/extensions/jolli.jollimemory-vscode-0.99.18-universal"}
+[2026-10-08T07:29:07.129Z] WARN  [activate] Could not resolve git HEAD path — branch-switch auto-refresh disabled
+[2026-10-08T07:29:07.187Z] WARN  [activate] Could not resolve orphan ref path — memory-finished auto-refresh disabled
+[2026-10-08T07:29:07.189Z] INFO  [initialLoad] Loading all panels
+[2026-10-08T07:29:07.235Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.235Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.235Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.236Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.236Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.236Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.238Z] INFO  [RepoProfile] manual-disable read → false (by=manuallyDisabled, pid=11712, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=none)
+[2026-10-08T07:29:07.242Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-08T07:29:07.242Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-08T07:29:07.242Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-08T07:29:07.242Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-08T07:29:07.242Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.444Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.607Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.782Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.789Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:07.841Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:29:07.843Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:08.059Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:29:08.059Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T07:29:08.123Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/nivabupa — using orphan-only storage
+[2026-10-08T07:29:08.124Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:29:08.124Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:29:08.211Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:08.218Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:08.224Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:08.304Z] ERROR [initialLoad] Failed to load panels {"code":69,"killed":false,"signal":null,"cmd":"git rev-parse HEAD","stdout":"","stderr":"You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.\n"}
+[2026-10-08T07:29:08.305Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:08.308Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:08.360Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:08.360Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:08.410Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:29:08.410Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T07:29:08.542Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/nivabupa — using orphan-only storage
+[2026-10-08T07:29:08.543Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:29:08.543Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T07:29:08.618Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/nivabupa — using orphan-only storage
+[2026-10-08T07:29:08.624Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:08.688Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:08.689Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:08.746Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:08.803Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:08.804Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:29:08.804Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:08.858Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:29:08.859Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T07:29:08.913Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/nivabupa — using orphan-only storage
+[2026-10-08T07:29:08.914Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:29:08.914Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:08.915Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:29:08.973Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:08.973Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:09.040Z] INFO  [SchemaV5Migration] Storage backend not initialized yet — skipping schema v5 migration (no data to migrate)
+[2026-10-08T07:29:09.040Z] INFO  [activate] Schema v5 migration: alreadyDone=false fresh=true migrated=0 skipped=0
+[2026-10-08T07:29:09.355Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:09.360Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:09.487Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:29:09.837Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:09.971Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:29:09.972Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:29:10.182Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:10.256Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:29:10.446Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:29:10.590Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:30:06.868Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:31:06.864Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:32:06.868Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:35.492Z] INFO  [activate] Activating JolliMemory extension {"workspaceRoot":"/Users/jitendrasingh/Desktop/projects/nivabupa","extensionPath":"/Users/jitendrasingh/.antigravity-ide/extensions/jolli.jollimemory-vscode-0.99.18-universal"}
+[2026-10-08T07:34:35.965Z] WARN  [activate] Could not resolve git HEAD path — branch-switch auto-refresh disabled
+[2026-10-08T07:34:36.024Z] WARN  [activate] Could not resolve orphan ref path — memory-finished auto-refresh disabled
+[2026-10-08T07:34:36.026Z] INFO  [initialLoad] Loading all panels
+[2026-10-08T07:34:36.076Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.077Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.077Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.077Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.077Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.077Z] INFO  [RepoProfile] manual-disable read → false (by=manuallyDisabled, pid=13645, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=none)
+[2026-10-08T07:34:36.078Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.084Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-08T07:34:36.084Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-08T07:34:36.084Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-08T07:34:36.084Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-08T07:34:36.084Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.263Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.442Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.645Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.652Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.707Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:34:36.710Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:36.896Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:34:36.896Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T07:34:36.967Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/nivabupa — using orphan-only storage
+[2026-10-08T07:34:36.967Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:34:36.967Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:34:37.145Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:37.145Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:37.160Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:37.229Z] ERROR [initialLoad] Failed to load panels {"code":69,"killed":false,"signal":null,"cmd":"git rev-parse HEAD","stdout":"","stderr":"You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.\n"}
+[2026-10-08T07:34:37.230Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:37.242Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:37.257Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:37.269Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:37.306Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:34:37.306Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T07:34:37.374Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/nivabupa — using orphan-only storage
+[2026-10-08T07:34:37.379Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:34:37.380Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T07:34:37.455Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/nivabupa — using orphan-only storage
+[2026-10-08T07:34:37.457Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:37.522Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:37.522Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:37.669Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:37.670Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:34:37.675Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:37.675Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:37.735Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:34:37.736Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:37.736Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:34:37.737Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:34:37.737Z] INFO  [StorageFactory] StorageFactory.create: route=uncutover, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T07:34:37.790Z] WARN  [StorageFactory] Not a claimable project (no git worktree, or inside the Memory Bank folder): /Users/jitendrasingh/Desktop/projects/nivabupa — using orphan-only storage
+[2026-10-08T07:34:37.846Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:37.846Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:37.921Z] INFO  [SchemaV5Migration] Storage backend not initialized yet — skipping schema v5 migration (no data to migrate)
+[2026-10-08T07:34:37.922Z] INFO  [activate] Schema v5 migration: alreadyDone=false fresh=true migrated=0 skipped=0
+[2026-10-08T07:34:38.199Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:38.200Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:38.386Z] WARN  [CutoverRouter] database unavailable for un-cutover repo (Failed to get git common dir: You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.) — orphan remains authoritative
+[2026-10-08T07:34:38.592Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:38.760Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:34:38.761Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-08T07:34:38.938Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:index.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:39.060Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:34:39.333Z] WARN  [GitOps] Read failed for jollimemory/summaries/v3:schema-v5-migration.json (git exit 69): You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2026-10-08T07:34:39.417Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=undefined, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-08T07:35:35.496Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:36:35.501Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:37:35.504Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:38:35.510Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:39:35.516Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:40:35.521Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:41:35.522Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:42:35.529Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:43:35.530Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:44:35.539Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:45:35.542Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:46:35.538Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:47:35.545Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:48:35.542Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:49:35.540Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:50:35.537Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:51:35.544Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:52:35.551Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:53:35.548Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:54:35.556Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:55:35.563Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:56:35.569Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:57:35.571Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:58:35.576Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T07:59:35.571Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:00:35.579Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:01:35.587Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:02:35.592Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:03:35.596Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:04:35.591Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:05:35.600Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:06:35.606Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:07:35.613Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:08:35.618Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:09:35.621Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:10:35.622Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again

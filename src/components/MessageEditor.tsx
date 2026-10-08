@@ -78,11 +78,10 @@ export default function MessageEditor({
             type="button"
             onClick={handleCopy}
             id="copy-message-btn"
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-              copied
-                ? 'bg-emerald-50 text-emerald-700 border border-emerald-300'
-                : 'bg-slate-100 text-slate-700 hover:bg-sky-50 hover:text-[#0077C8] border border-transparent'
-            }`}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${copied
+              ? 'bg-emerald-50 text-emerald-700 border border-emerald-300'
+              : 'bg-slate-100 text-slate-700 hover:bg-sky-50 hover:text-[#0077C8] border border-transparent'
+              }`}
           >
             {copied ? (
               <>
@@ -107,11 +106,10 @@ export default function MessageEditor({
           value={message}
           onChange={(e) => onChangeMessage(e.target.value)}
           placeholder="Share how Niva Bupa handled your claim settlement..."
-          className={`w-full rounded-xl border p-3.5 text-sm sm:text-base leading-relaxed text-slate-900 bg-slate-50/50 placeholder:text-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 transition-all resize-none ${
-            isOverLimit
-              ? 'border-red-400 focus:ring-red-200'
-              : 'border-slate-300 focus:border-[#009FE3] focus:ring-sky-100'
-          }`}
+          className={`w-full rounded-xl border p-3.5 text-sm sm:text-base leading-relaxed text-slate-900 bg-slate-50/50 placeholder:text-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 transition-all resize-none ${isOverLimit
+            ? 'border-red-400 focus:ring-red-200'
+            : 'border-slate-300 focus:border-[#009FE3] focus:ring-sky-100'
+            }`}
         />
 
         {/* Character counter & Platform context bar */}
@@ -123,13 +121,12 @@ export default function MessageEditor({
           </div>
 
           <div
-            className={`font-mono text-xs font-semibold ${
-              isOverLimit
-                ? 'text-red-600 flex items-center gap-1'
-                : message.length > charLimit * 0.85
+            className={`font-mono text-xs font-semibold ${isOverLimit
+              ? 'text-red-600 flex items-center gap-1'
+              : message.length > charLimit * 0.85
                 ? 'text-amber-600'
                 : 'text-slate-500'
-            }`}
+              }`}
           >
             {isOverLimit && <AlertTriangle className="w-3.5 h-3.5 text-red-500" />}
             <span>
@@ -154,11 +151,10 @@ export default function MessageEditor({
                 type="button"
                 onClick={() => handleAppendHashtag(tag)}
                 disabled={isIncluded}
-                className={`text-xs px-2.5 py-1 rounded-lg transition-colors cursor-pointer ${
-                  isIncluded
-                    ? 'bg-sky-50 text-[#0077C8] font-semibold border border-sky-200 opacity-80 cursor-default'
-                    : 'bg-slate-100 text-slate-600 hover:bg-sky-100 hover:text-[#0077C8] border border-slate-200'
-                }`}
+                className={`text-xs px-2.5 py-1 rounded-lg transition-colors cursor-pointer ${isIncluded
+                  ? 'bg-sky-50 text-[#0077C8] font-semibold border border-sky-200 opacity-80 cursor-default'
+                  : 'bg-slate-100 text-slate-600 hover:bg-sky-100 hover:text-[#0077C8] border border-slate-200'
+                  }`}
               >
                 {tag} {isIncluded ? '✓' : '+'}
               </button>
@@ -173,7 +169,7 @@ export default function MessageEditor({
         <div>
           {platform === 'instagram' && (
             <p>
-              <strong>Instagram note:</strong> Web browsers cannot directly inject caption text into Instagram. Clicking &ldquo;Share Now&rdquo; copies this message to your clipboard and opens Instagram so you can easily paste it.
+              <strong>Instagram note:</strong> Instagram does not allow websites to automatically inject captions. Clicking &ldquo;Share Now&rdquo; copies this message to your clipboard so you can paste it directly into your post, reel, or story.
             </p>
           )}
           {platform === 'youtube' && (
@@ -188,7 +184,7 @@ export default function MessageEditor({
           )}
           {platform === 'linkedin' && (
             <p>
-              <strong>LinkedIn note:</strong> We will open LinkedIn with your verified claim advocacy card. Your message will be copied to clipboard ready to paste into your update.
+              <strong>LinkedIn note:</strong> LinkedIn prevents external websites from automatically filling post text. Clicking &ldquo;Share Now&rdquo; copies this message to your clipboard so you can paste (Ctrl+V / Cmd+V) directly into your LinkedIn post.
             </p>
           )}
           {platform === 'x' && (
