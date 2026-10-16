@@ -907,3 +907,414 @@
 [2026-10-08T08:31:48.953Z] INFO  [PrePushHook] [trace=f5116474fcc4a7b637ad6be73e406afa] pre-push hook: remote=origin budget=3000ms
 [2026-10-08T08:31:48.962Z] INFO  [RepoProfile] [trace=f5116474fcc4a7b637ad6be73e406afa] manual-disable read → false (by=manuallyDisabled, pid=17889, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
 [2026-10-08T08:31:48.962Z] INFO  [SessionTracker] [trace=f5116474fcc4a7b637ad6be73e406afa] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.492Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook started (source: message) ===
+[2026-10-08T08:32:10.495Z] INFO  [RepoProfile] manual-disable read → false (by=manuallyDisabled, pid=18126, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
+[2026-10-08T08:32:10.506Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook finished ===
+[2026-10-08T08:32:10.615Z] INFO  [RepoProfile] [trace=ed9f17f210a940c0dee293d5359e255b] manual-disable read → false (by=manuallyDisabled, pid=18133, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
+[2026-10-08T08:32:10.625Z] INFO  [PostCommitHook] [trace=ed9f17f210a940c0dee293d5359e255b] Detected operation: commit
+[2026-10-08T08:32:10.640Z] INFO  [PostCommitHook] [trace=ed9f17f210a940c0dee293d5359e255b] Enqueued: type=commit hash=fd52223f
+[2026-10-08T08:32:10.640Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Launching background worker
+[2026-10-08T08:32:10.641Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Background worker spawned (PID: 18138)
+[2026-10-08T08:32:10.642Z] INFO  [EnsureGlobalDaemon] [trace=ed9f17f210a940c0dee293d5359e255b] spawned global daemon ensure helper (pid 18139)
+[2026-10-08T08:32:10.643Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.737Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.739Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.740Z] INFO  [RepoProfile] [trace=ed9f17f210a940c0dee293d5359e255b] manual-disable read → false (by=manuallyDisabled, pid=18138, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
+[2026-10-08T08:32:10.756Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] === Queue worker started === node=24.13.0 kind=vscode-plugin source=vscode pkgVer=0.99.18 cliVer=0.99.18 dist=/Users/jitendrasingh/.vscode/extensions/jolli.jollimemory-vscode-0.99.18/dist
+[2026-10-08T08:32:10.756Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.758Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.760Z] INFO  [StorageFactory] [trace=ed9f17f210a940c0dee293d5359e255b] StorageFactory.create: route=legacy-fenced, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T08:32:10.796Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.797Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.797Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.797Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.797Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.827Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Processing queue entry: type=commit hash=fd52223f
+[2026-10-08T08:32:10.828Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.836Z] INFO  [GitOps] [trace=ed9f17f210a940c0dee293d5359e255b] Commit fd52223f: code for nivabupa
+[2026-10-08T08:32:10.836Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Commit: fd52223f - code for nivabupa (8ms)
+[2026-10-08T08:32:10.880Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Discovered 1 Antigravity session(s)
+[2026-10-08T08:32:10.881Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:10.881Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Transcript source: session=d5716cf6-dde6-46a6-af7e-b6aa2a0b7454, lines=9→33, entries=2
+[2026-10-08T08:32:10.902Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Git diff: 9 files changed, +204 -13 (21ms)
+[2026-10-08T08:32:10.934Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Prompt blocks: plans=0 notes=0 references=0 (+0 track-only archived, not prompted) (AI soft-excluded 0)
+[2026-10-08T08:32:10.934Z] INFO  [Summarizer] [trace=ed9f17f210a940c0dee293d5359e255b] Generating summary for commit fd52223f
+[2026-10-08T08:32:10.934Z] INFO  [Summarizer] [trace=ed9f17f210a940c0dee293d5359e255b] Context: transcript=2, files=9, lines=204+13
+[2026-10-08T08:32:10.935Z] WARN  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] First API attempt failed: No LLM provider available. Set an Anthropic API key (ANTHROPIC_API_KEY) or configure a Jolli Space API key (jolliApiKey).. Retrying in 2000ms...
+[2026-10-08T08:32:12.936Z] INFO  [Summarizer] [trace=ed9f17f210a940c0dee293d5359e255b] Generating summary for commit fd52223f
+[2026-10-08T08:32:12.936Z] INFO  [Summarizer] [trace=ed9f17f210a940c0dee293d5359e255b] Context: transcript=2, files=9, lines=204+13
+[2026-10-08T08:32:12.937Z] ERROR [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] API call failed after retry: No LLM provider available. Set an Anthropic API key (ANTHROPIC_API_KEY) or configure a Jolli Space API key (jolliApiKey).
+[2026-10-08T08:32:12.937Z] WARN  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Saving summary with empty topics + llm-failed marker for commit fd52223f
+[2026-10-08T08:32:12.938Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] API summary generated (2.0s)
+[2026-10-08T08:32:12.938Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Plan registry scan: found 0 uncommitted slug(s) on main: []
+[2026-10-08T08:32:12.939Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Plan association: detected 0 slug(s) from transcripts: []
+[2026-10-08T08:32:12.939Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Note registry scan: found 0 uncommitted note(s) on main: []
+[2026-10-08T08:32:12.939Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Note association: detected 0 note(s): []
+[2026-10-08T08:32:12.940Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Reference association: detected 0 ref(s) for branch main
+[2026-10-08T08:32:12.943Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Summary built for fd52223f: recap=no, topics=0, plans=absent, notes=absent, references=absent
+[2026-10-08T08:32:12.978Z] ERROR [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Failed to process queue entry type=commit ref=fd52223f: SqliteStorage: cannot write memories for unregistered https://github.com/jitenthripola/nivabupa
+[2026-10-08T08:32:12.979Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] Processed 1 queue entries
+[2026-10-08T08:32:12.980Z] INFO  [QueueWorker] [trace=ed9f17f210a940c0dee293d5359e255b] === Queue worker finished ===
+[2026-10-08T08:32:12.981Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:12.981Z] INFO  [SessionSync] [trace=ed9f17f210a940c0dee293d5359e255b] session sync: not uploading — no API key configured
+[2026-10-08T08:32:12.981Z] INFO  [SessionTracker] [trace=ed9f17f210a940c0dee293d5359e255b] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:13.172Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-08T08:32:13.172Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-08T08:32:13.172Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-08T08:32:13.173Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-08T08:32:13.173Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:13.173Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:13.173Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:13.173Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:13.173Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:13.175Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:13.178Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:13.178Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:13.425Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:13.426Z] INFO  [StorageFactory] StorageFactory.create: route=legacy-fenced, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T08:32:16.327Z] INFO  [PrePushHook] [trace=8d0892feac93cd46a6fe5773c79dcf0c] pre-push hook: remote=origin budget=3000ms
+[2026-10-08T08:32:16.329Z] INFO  [RepoProfile] [trace=8d0892feac93cd46a6fe5773c79dcf0c] manual-disable read → false (by=manuallyDisabled, pid=18647, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
+[2026-10-08T08:32:16.329Z] INFO  [SessionTracker] [trace=8d0892feac93cd46a6fe5773c79dcf0c] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:16.338Z] INFO  [PushPendingStore] [trace=8d0892feac93cd46a6fe5773c79dcf0c] Enqueued 1 new push-pending entries (branch=main)
+[2026-10-08T08:32:16.338Z] INFO  [PrePushHook] [trace=8d0892feac93cd46a6fe5773c79dcf0c] pre-push: recorded 1 commit(s) across 1 pushed ref(s)
+[2026-10-08T08:32:16.343Z] INFO  [PrePushHook] [trace=8d0892feac93cd46a6fe5773c79dcf0c] Recorded 1 commit(s) for later sync — not signed in to Jolli
+[2026-10-08T08:32:16.343Z] INFO  [SessionTracker] [trace=8d0892feac93cd46a6fe5773c79dcf0c] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:32:16.357Z] INFO  [StorageFactory] [trace=8d0892feac93cd46a6fe5773c79dcf0c] StorageFactory.create: route=legacy-fenced, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T08:32:35.647Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:33:35.650Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:34:35.652Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:35:35.652Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:36:35.658Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:37:35.658Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:38:35.660Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:35.658Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:55.889Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook started (source: message) ===
+[2026-10-08T08:39:55.898Z] INFO  [RepoProfile] manual-disable read → false (by=manuallyDisabled, pid=19226, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
+[2026-10-08T08:39:55.923Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook finished ===
+[2026-10-08T08:39:56.063Z] INFO  [RepoProfile] [trace=26167d12beccbe22b2c04bb706868a20] manual-disable read → false (by=manuallyDisabled, pid=19233, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
+[2026-10-08T08:39:56.072Z] INFO  [PostCommitHook] [trace=26167d12beccbe22b2c04bb706868a20] Detected operation: commit
+[2026-10-08T08:39:56.087Z] INFO  [PostCommitHook] [trace=26167d12beccbe22b2c04bb706868a20] Enqueued: type=commit hash=fe7984a5
+[2026-10-08T08:39:56.087Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Launching background worker
+[2026-10-08T08:39:56.088Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Background worker spawned (PID: 19238)
+[2026-10-08T08:39:56.089Z] INFO  [EnsureGlobalDaemon] [trace=26167d12beccbe22b2c04bb706868a20] spawned global daemon ensure helper (pid 19239)
+[2026-10-08T08:39:56.090Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.214Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.216Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.217Z] INFO  [RepoProfile] [trace=26167d12beccbe22b2c04bb706868a20] manual-disable read → false (by=manuallyDisabled, pid=19238, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
+[2026-10-08T08:39:56.231Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] === Queue worker started === node=24.13.0 kind=vscode-plugin source=vscode pkgVer=0.99.18 cliVer=0.99.18 dist=/Users/jitendrasingh/.vscode/extensions/jolli.jollimemory-vscode-0.99.18/dist
+[2026-10-08T08:39:56.232Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.242Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.244Z] INFO  [StorageFactory] [trace=26167d12beccbe22b2c04bb706868a20] StorageFactory.create: route=legacy-fenced, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T08:39:56.278Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.278Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.278Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.278Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.278Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.392Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Processing queue entry: type=commit hash=fe7984a5
+[2026-10-08T08:39:56.394Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.403Z] INFO  [GitOps] [trace=26167d12beccbe22b2c04bb706868a20] Commit fe7984a5: fix: use webpack for production build to avoid Turbopack Pos
+[2026-10-08T08:39:56.403Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Commit: fe7984a5 - fix: use webpack for production build to avoid Turbopack PostCSS crash (10ms)
+[2026-10-08T08:39:56.621Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Discovered 1 Antigravity session(s)
+[2026-10-08T08:39:56.622Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:56.623Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Transcript source: session=d5716cf6-dde6-46a6-af7e-b6aa2a0b7454, lines=9→56, entries=4
+[2026-10-08T08:39:56.645Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Git diff: 1 files changed, +1 -1 (21ms)
+[2026-10-08T08:39:56.666Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Prompt blocks: plans=0 notes=0 references=0 (+0 track-only archived, not prompted) (AI soft-excluded 0)
+[2026-10-08T08:39:56.666Z] INFO  [Summarizer] [trace=26167d12beccbe22b2c04bb706868a20] Generating summary for commit fe7984a5
+[2026-10-08T08:39:56.666Z] INFO  [Summarizer] [trace=26167d12beccbe22b2c04bb706868a20] Context: transcript=4, files=1, lines=1+1
+[2026-10-08T08:39:56.667Z] WARN  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] First API attempt failed: No LLM provider available. Set an Anthropic API key (ANTHROPIC_API_KEY) or configure a Jolli Space API key (jolliApiKey).. Retrying in 2000ms...
+[2026-10-08T08:39:58.668Z] INFO  [Summarizer] [trace=26167d12beccbe22b2c04bb706868a20] Generating summary for commit fe7984a5
+[2026-10-08T08:39:58.669Z] INFO  [Summarizer] [trace=26167d12beccbe22b2c04bb706868a20] Context: transcript=4, files=1, lines=1+1
+[2026-10-08T08:39:58.669Z] ERROR [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] API call failed after retry: No LLM provider available. Set an Anthropic API key (ANTHROPIC_API_KEY) or configure a Jolli Space API key (jolliApiKey).
+[2026-10-08T08:39:58.670Z] WARN  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Saving summary with empty topics + llm-failed marker for commit fe7984a5
+[2026-10-08T08:39:58.670Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] API summary generated (2.0s)
+[2026-10-08T08:39:58.671Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Plan registry scan: found 0 uncommitted slug(s) on main: []
+[2026-10-08T08:39:58.671Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Plan association: detected 0 slug(s) from transcripts: []
+[2026-10-08T08:39:58.672Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Note registry scan: found 0 uncommitted note(s) on main: []
+[2026-10-08T08:39:58.672Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Note association: detected 0 note(s): []
+[2026-10-08T08:39:58.673Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Reference association: detected 0 ref(s) for branch main
+[2026-10-08T08:39:58.677Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Summary built for fe7984a5: recap=no, topics=0, plans=absent, notes=absent, references=absent
+[2026-10-08T08:39:58.713Z] ERROR [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Failed to process queue entry type=commit ref=fe7984a5: SqliteStorage: cannot write memories for unregistered https://github.com/jitenthripola/nivabupa
+[2026-10-08T08:39:58.714Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] Processed 1 queue entries
+[2026-10-08T08:39:58.716Z] INFO  [QueueWorker] [trace=26167d12beccbe22b2c04bb706868a20] === Queue worker finished ===
+[2026-10-08T08:39:58.716Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:58.717Z] INFO  [SessionSync] [trace=26167d12beccbe22b2c04bb706868a20] session sync: not uploading — no API key configured
+[2026-10-08T08:39:58.717Z] INFO  [SessionTracker] [trace=26167d12beccbe22b2c04bb706868a20] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:58.898Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-08T08:39:58.898Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-08T08:39:58.898Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-08T08:39:58.898Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-08T08:39:58.901Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:58.901Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:58.901Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:58.901Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:58.901Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:58.901Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:58.901Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:39:58.901Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:40:00.163Z] INFO  [PrePushHook] [trace=6075d0a7600e36bc4c40c0b89b371532] pre-push hook: remote=origin budget=3000ms
+[2026-10-08T08:40:00.165Z] INFO  [RepoProfile] [trace=6075d0a7600e36bc4c40c0b89b371532] manual-disable read → false (by=manuallyDisabled, pid=19502, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
+[2026-10-08T08:40:00.165Z] INFO  [SessionTracker] [trace=6075d0a7600e36bc4c40c0b89b371532] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:40:00.173Z] INFO  [PushPendingStore] [trace=6075d0a7600e36bc4c40c0b89b371532] Enqueued 1 new push-pending entries (branch=main)
+[2026-10-08T08:40:00.174Z] INFO  [PrePushHook] [trace=6075d0a7600e36bc4c40c0b89b371532] pre-push: recorded 1 commit(s) across 1 pushed ref(s)
+[2026-10-08T08:40:00.179Z] INFO  [PrePushHook] [trace=6075d0a7600e36bc4c40c0b89b371532] Recorded 1 commit(s) for later sync — not signed in to Jolli
+[2026-10-08T08:40:00.179Z] INFO  [SessionTracker] [trace=6075d0a7600e36bc4c40c0b89b371532] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:40:00.192Z] INFO  [StorageFactory] [trace=6075d0a7600e36bc4c40c0b89b371532] StorageFactory.create: route=legacy-fenced, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-08T08:40:35.659Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:41:35.661Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:42:35.658Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:43:35.658Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:44:35.667Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:45:35.674Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:46:35.670Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:47:35.678Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:48:35.680Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:49:35.688Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:50:35.691Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:51:35.691Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:52:35.695Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:53:35.697Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:54:35.697Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:55:35.697Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:56:35.700Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:57:35.702Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:58:35.708Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T08:59:35.709Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:00:35.709Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:01:35.712Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:02:35.717Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:03:35.723Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:04:35.731Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:05:35.733Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:06:35.741Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:07:35.749Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:08:35.755Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:09:35.753Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:10:35.761Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:11:35.768Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:12:35.774Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:13:35.776Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:14:35.784Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:15:35.782Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:16:35.788Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:17:35.795Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:18:35.802Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:19:35.809Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:20:35.815Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:21:35.824Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:22:35.824Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:23:35.829Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:24:35.837Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:25:35.844Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:26:35.852Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:27:35.852Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:28:35.849Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:29:35.858Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:30:35.859Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:31:35.867Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:32:35.865Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:33:35.868Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:34:35.867Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:35:35.872Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:36:35.885Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:37:35.875Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:38:35.876Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:39:35.876Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:40:35.876Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:41:35.877Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:42:35.876Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:43:35.879Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:44:35.880Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:45:35.880Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:46:35.877Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:47:35.876Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:48:35.879Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:49:35.882Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:50:35.880Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:51:35.881Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:52:35.885Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:53:35.888Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:54:35.889Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:55:35.888Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:56:35.886Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:57:35.890Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:58:35.887Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T09:59:35.888Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:00:35.889Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:01:35.892Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:02:35.893Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:03:35.891Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:04:35.895Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:05:35.899Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:06:35.897Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:07:35.899Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:08:35.902Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:09:35.902Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:10:35.906Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:11:35.910Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:12:35.910Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:13:35.912Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:14:35.910Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:15:35.914Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:16:35.912Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:17:35.915Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:18:35.912Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:19:35.915Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:20:35.920Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:21:35.919Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:22:35.918Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:23:35.923Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:24:35.926Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:25:35.936Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:26:35.942Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:27:35.950Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:28:35.946Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:29:35.947Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:30:35.950Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:31:35.957Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:32:35.955Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:33:35.963Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:34:35.968Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:35:35.969Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:36:35.969Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:37:35.970Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:38:35.979Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:39:35.979Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:40:35.986Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:41:35.985Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:42:35.991Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:43:35.989Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:44:35.989Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:45:35.996Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:46:35.996Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:47:36.007Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:48:36.011Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:49:36.007Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:50:36.011Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:51:36.017Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:52:36.024Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:53:36.029Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:54:36.037Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:55:36.041Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:56:36.050Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:57:36.057Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:58:36.064Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T10:59:36.069Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:00:36.073Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:01:36.081Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:02:36.085Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:03:36.096Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:04:36.092Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:05:36.093Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:06:36.100Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:07:36.110Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:08:36.106Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:09:36.104Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:10:36.108Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:11:36.113Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:12:36.112Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:13:36.111Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:14:36.117Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:15:36.122Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:16:36.125Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:17:36.122Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:18:36.122Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:19:36.121Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:20:36.119Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:21:36.125Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:22:36.122Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:23:36.125Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:24:36.122Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:25:36.120Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:26:36.121Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:27:36.118Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:28:36.124Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:29:36.130Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:30:47.504Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T11:46:08.343Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T12:03:51.287Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T12:20:49.713Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T12:31:43.128Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T12:33:46.171Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T12:51:30.422Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T12:52:59.704Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T13:10:30.144Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T13:27:07.524Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T13:32:45.013Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T13:49:11.072Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T14:03:06.930Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T14:18:59.264Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T14:29:50.747Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T14:30:50.740Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T14:31:50.744Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T14:32:50.738Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T14:33:50.734Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T14:34:50.740Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-08T14:35:50.737Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.203Z] INFO  [activate] Activating JolliMemory extension {"workspaceRoot":"/Users/jitendrasingh/Desktop/projects/nivabupa","extensionPath":"/Users/jitendrasingh/.antigravity-ide/extensions/jolli.jollimemory-vscode-0.99.18-universal"}
+[2026-10-16T09:55:52.280Z] INFO  [initialLoad] Loading all panels
+[2026-10-16T09:55:52.310Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.310Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.311Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.311Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.311Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.311Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.313Z] INFO  [RepoProfile] manual-disable read → false (by=manuallyDisabled, pid=1285, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
+[2026-10-16T09:55:52.320Z] INFO  [PlanService] detectPlans found 0 plans (0 in registry)
+[2026-10-16T09:55:52.320Z] INFO  [NoteService] detectNotes found 0 notes (0 in registry)
+[2026-10-16T09:55:52.320Z] INFO  [references] detectReferences(*) found 0 (0 in registry)
+[2026-10-16T09:55:52.320Z] INFO  [SkillProjection] projectActiveSkills: 0 active (0 in registry)
+[2026-10-16T09:55:52.321Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.464Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.497Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.546Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.561Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.873Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:52.880Z] INFO  [StorageFactory] StorageFactory.create: route=legacy-fenced, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-16T09:55:53.030Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-16T09:55:53.030Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-16T09:55:53.089Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:53.092Z] INFO  [StorageFactory] StorageFactory.create: route=legacy-fenced, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-16T09:55:53.155Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:53.161Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:53.224Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:53.228Z] INFO  [StorageFactory] StorageFactory.create: route=legacy-fenced, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-16T09:55:53.323Z] INFO  [SchemaV5Migration] Storage backend not initialized yet — skipping schema v5 migration (no data to migrate)
+[2026-10-16T09:55:53.323Z] INFO  [activate] Schema v5 migration: alreadyDone=false fresh=true migrated=0 skipped=0
+[2026-10-16T09:55:53.357Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:53.641Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-16T09:55:53.655Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:53.656Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-16T09:55:53.796Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-16T09:55:53.811Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:53.812Z] INFO  [initialLoad] All panels loaded — updating status bar
+[2026-10-16T09:55:53.812Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-16T09:55:53.965Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:54.039Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:54.370Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-16T09:55:54.370Z] INFO  [Installer] Checking Jolli Memory status
+[2026-10-16T09:55:54.634Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-16T09:55:54.652Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:54.653Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:55:54.764Z] INFO  [StorageFactory] StorageFactory.create: route=legacy-fenced, projectPath=/Users/jitendrasingh/Desktop/projects/nivabupa
+[2026-10-16T09:55:54.886Z] INFO  [RepoProfile] [trace=6780d9b8e5545346beb9905c20d436bd] manual-disable read → false (by=manuallyDisabled, pid=2041, cwd=/Users/jitendrasingh/Desktop/projects/nivabupa, profile=/Users/jitendrasingh/Desktop/projects/nivabupa/.jolli/jollimemory/profile.json, raw: userDisabled=undefined manuallyDisabled=false fence=2026-10-08T08:12:16.788Z)
+[2026-10-16T09:55:54.888Z] INFO  [PrePushWorker] [trace=6780d9b8e5545346beb9905c20d436bd] PrePushWorker(vscode-activation): spawned compensation drain starting
+[2026-10-16T09:55:54.906Z] INFO  [PushPendingStore] [trace=6780d9b8e5545346beb9905c20d436bd] Pruned 5 stale push-pending entries (>168h old)
+[2026-10-16T09:55:54.930Z] INFO  [PrePushWorker] [trace=6780d9b8e5545346beb9905c20d436bd] PrePushWorker(vscode-activation): drain done — attempted=0 pushed=0 failed=0 (no pending entries)
+[2026-10-16T09:55:55.256Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, hermesHook=false, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=false/undefined, cursor=true/true, copilot=false/true, copilotChat=true, cline=false/undefined
+[2026-10-16T09:56:52.203Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:57:52.206Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:58:52.205Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T09:59:52.208Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:00:52.211Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:01:52.209Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:02:52.219Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:03:52.213Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:04:52.215Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:05:52.220Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:06:52.221Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:07:52.220Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:08:52.222Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:09:52.222Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:10:52.230Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:11:52.239Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again
+[2026-10-16T10:12:52.239Z] INFO  [SessionTracker] Ignoring stored credential for a retired Jolli host — sign in again

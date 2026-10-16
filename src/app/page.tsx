@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ClaimSummaryCard from '@/components/ClaimSummaryCard';
@@ -35,6 +35,27 @@ function AdvocacyJourneyPage() {
   const [showInstagramModal, setShowInstagramModal] = useState<boolean>(false);
   const [showYouTubeModal, setShowYouTubeModal] = useState<boolean>(false);
   const [generatedShareData, setGeneratedShareData] = useState<ShareLinkResponse | null>(null);
+
+  // Restore share state if navigating back (e.g. from Facebook redirect in iPhone Safari)
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const stored = sessionStorage.getItem('nivabupa_has_shared');
+      if (stored === 'true') {
+        setHasSharedSuccessfully(true);
+      }
+    }
+  }, []);
+
+  const markSharedSuccessfully = () => {
+    setHasSharedSuccessfully(true);
+    if (typeof window !== 'undefined') {
+      try {
+        sessionStorage.setItem('nivabupa_has_shared', 'true');
+      } catch {
+        // Ignore privacy/quota errors
+      }
+    }
+  };
 
   // References for smooth scrolling
   const sharingSectionRef = useRef<HTMLDivElement>(null);
@@ -164,11 +185,11 @@ function AdvocacyJourneyPage() {
         }
       }
 
-      // Open strictly in a new tab without ever replacing the current page
+      // Open destination URL (handles iOS Safari redirect + cookie preservation)
       openUrlInNewTab(intent.intentUrl);
 
       setIsShareLoading(false);
-      setHasSharedSuccessfully(true);
+      markSharedSuccessfully();
 
       trackEvent('share_completed', selectedPlatform, {
         mode: 'web_intent',
@@ -183,16 +204,36 @@ function AdvocacyJourneyPage() {
     }
   };
 
-  // Safely open any URL in a single new browser tab
+  // Safely open destination platform URL.
+  // In iPhone / iPad Safari, window.open() inside asynchronous chains is blocked by WebKit's popup blocker.
+  // Direct top-level navigation (window.location.href) bypasses the popup blocker and ensures
+  // first-party cookies are maintained so logged-in Facebook sessions are properly recognized.
   const openUrlInNewTab = (url: string) => {
     if (typeof window === 'undefined' || !url) return;
-    window.open(url, '_blank');
+
+    // Detect iOS devices (iPhone, iPad, iPod, or modern iPadOS reporting MacIntel with touch)
+    const isIOS =
+      /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (typeof navigator.platform === 'string' &&
+        navigator.platform === 'MacIntel' &&
+        navigator.maxTouchPoints > 1);
+
+    if (isIOS) {
+      window.location.href = url;
+      return;
+    }
+
+    const popupWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    // Fallback if popup blocker intercepted
+    if (!popupWindow || popupWindow.closed || typeof popupWindow.closed === 'undefined') {
+      window.location.href = url;
+    }
   };
 
   // LinkedIn confirm handler
   const handleLinkedInConfirmed = () => {
     setShowLinkedInModal(false);
-    setHasSharedSuccessfully(true);
+    markSharedSuccessfully();
     trackEvent('share_completed', 'linkedin', {
       mode: 'web_intent',
       shareUrl: pendingLinkedInUrl,
@@ -206,14 +247,14 @@ function AdvocacyJourneyPage() {
   // Instagram confirm handler
   const handleInstagramConfirmed = () => {
     setShowInstagramModal(false);
-    setHasSharedSuccessfully(true);
+    markSharedSuccessfully();
     trackEvent('share_completed', 'instagram', { mode: 'app_deep_link' });
   };
 
   // YouTube confirm handler
   const handleYouTubeConfirmed = () => {
     setShowYouTubeModal(false);
-    setHasSharedSuccessfully(true);
+    markSharedSuccessfully();
     trackEvent('share_completed', 'youtube', { mode: 'studio_upload' });
 
     openUrlInNewTab('https://www.youtube.com/upload');

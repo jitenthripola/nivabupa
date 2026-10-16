@@ -32,10 +32,12 @@ export function buildPlatformIntent(
 
     case 'facebook':
       return {
-        // Facebook sharer supports url param; quote param is supported on desktop web dialogs
-        intentUrl: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`,
+        // Meta has deprecated the 'quote' parameter in sharer.php. Passing quote in query strings
+        // causes mobile Safari and Facebook's mobile routing to trigger redirect loops or force a login page
+        // even when the user is already logged in. A clean URL ensures Facebook directly opens the share/dialog.
+        intentUrl: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
         requiresClipboardCopy: true,
-        instructions: 'Opening Facebook. Your message is copied to your clipboard in case Facebook dialog requests manual paste.',
+        instructions: 'Opening Facebook. Your message is copied to your clipboard in case you want to customize your post text.',
       };
 
     case 'instagram':

@@ -179,7 +179,7 @@ export default function MessageEditor({
           )}
           {platform === 'facebook' && (
             <p>
-              <strong>Facebook note:</strong> We will open the Facebook share dialog with your advocacy link. Your message is also copied to clipboard in case you want to customize your post text.
+              <strong>Facebook note:</strong> We will redirect you to Facebook with your advocacy link. If you are already logged in on your browser or device, your post dialog opens directly. Your message is also copied to your clipboard.
             </p>
           )}
           {platform === 'linkedin' && (
