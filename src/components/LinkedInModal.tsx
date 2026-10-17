@@ -64,41 +64,27 @@ export default function LinkedInModal({
   const handleOpenLinkedInApp = async () => {
     const urls = getLinkedInShareUrls(shareUrl, message);
 
-    if (urls.isAndroid) {
-      // Android: launch Chrome intent targeting com.linkedin.android ACTION_SEND
-      // Opens LinkedIn App post composer directly with text and url pre-filled,
-      // and automatically falls back to mobile web if LinkedIn app is not installed.
-      window.location.href = urls.androidIntentUrl;
-      onConfirmOpenLinkedIn(urls.androidIntentUrl);
-      return;
-    }
-
-    if (urls.isIOS) {
-      // iOS: Try native share sheet first (Apple's official app-to-app bridge)
-      if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
-        try {
-          await navigator.share({
-            title: 'Niva Bupa Claim Experience',
-            text: message,
-            url: shareUrl || window.location.href,
-          });
-          onConfirmOpenLinkedIn();
+    if (urls.isMobile && typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+      try {
+        await navigator.share({
+          title: 'Niva Bupa Claim Experience',
+          text: message,
+          url: shareUrl || (typeof window !== 'undefined' ? window.location.href : ''),
+        });
+        onConfirmOpenLinkedIn();
+        return;
+      } catch (err: unknown) {
+        if ((err as Error)?.name === 'AbortError') {
           return;
-        } catch (err: unknown) {
-          if ((err as Error)?.name === 'AbortError') {
-            return;
-          }
-          console.warn('Native share dismissed or failed, attempting scheme:', err);
         }
+        console.warn('Native share dismissed or failed, attempting web composer:', err);
       }
-
-      // iOS Fallback: open LinkedIn Create Post
-      window.location.href = urls.webFallbackUrl;
-      onConfirmOpenLinkedIn(urls.webFallbackUrl);
-      return;
     }
 
-    // Desktop: Open web Create Post
+    // Web fallback: Open LinkedIn web Create Post
+    if (typeof window !== 'undefined') {
+      window.location.href = urls.webFallbackUrl;
+    }
     onConfirmOpenLinkedIn(urls.webFallbackUrl);
   };
 

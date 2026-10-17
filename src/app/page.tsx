@@ -236,22 +236,45 @@ function AdvocacyJourneyPage() {
           });
         }
 
+        // On mobile devices (iOS & Android):
+        // Web Share API triggers the native mobile OS share sheet, allowing the LinkedIn mobile app
+        // to open directly into its native "Create Post" composer with text & URL pre-filled.
+        if (linkedInUrls.isMobile && typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+          const sharePayload = {
+            title: 'Niva Bupa Claim Experience',
+            text: personalizedMessage,
+            url: shareData.shareUrl,
+          };
+
+          if (!navigator.canShare || navigator.canShare(sharePayload)) {
+            try {
+              await navigator.share(sharePayload);
+              setIsShareLoading(false);
+              markSharedSuccessfully();
+              trackEvent('share_completed', 'linkedin', {
+                mode: 'native_mobile_app_share',
+                shareUrl: shareData.shareUrl,
+              });
+              return;
+            } catch (shareErr: unknown) {
+              if ((shareErr as Error)?.name === 'AbortError') {
+                setIsShareLoading(false);
+                return;
+              }
+              console.warn('Native mobile share failed, falling back to web composer:', shareErr);
+            }
+          }
+        }
+
         setIsShareLoading(false);
         markSharedSuccessfully();
 
         trackEvent('share_completed', 'linkedin', {
-          mode: linkedInUrls.isMobile ? 'app_deep_link' : 'web_intent',
+          mode: linkedInUrls.isMobile ? 'mobile_web_composer' : 'web_composer',
           shareUrl: shareData.shareUrl,
         });
 
-        // Android: Directly open LinkedIn via Chrome intent (opens native Create Post composer directly,
-        // or falls back to web Create Post if app is not installed)
-        if (linkedInUrls.isAndroid) {
-          window.location.href = linkedInUrls.androidIntentUrl;
-          return;
-        }
-
-        // iOS & Desktop: Open LinkedIn Create Post directly via feed/?shareActive=true
+        // Desktop (and mobile fallback): open LinkedIn Create Post modal
         openUrlInNewTab(intent.intentUrl);
         return;
       }
