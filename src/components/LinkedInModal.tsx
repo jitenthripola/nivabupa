@@ -1,28 +1,59 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Check, Copy, ExternalLink, X, ArrowRight, Keyboard, ShieldAlert } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import {
+  Check,
+  Copy,
+  ExternalLink,
+  X,
+  ArrowRight,
+  ShieldAlert,
+  Smartphone,
+  Globe,
+  Share2,
+} from 'lucide-react';
+import { getLinkedInShareUrls } from '@/lib/shareUrls';
 
 interface LinkedInModalProps {
   isOpen: boolean;
   message: string;
+  shareUrl?: string;
   onClose: () => void;
-  onConfirmOpenLinkedIn: () => void;
+  onConfirmOpenLinkedIn: (customUrl?: string) => void;
 }
 
 export default function LinkedInModal({
   isOpen,
   message,
+  shareUrl = '',
   onClose,
   onConfirmOpenLinkedIn,
 }: LinkedInModalProps) {
   const [copied, setCopied] = useState(true);
+  const [canShare, setCanShare] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
+  const [isAndroid, setIsAndroid] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && typeof navigator !== 'undefined') {
+      const urls = getLinkedInShareUrls(shareUrl, message);
+      setIsMobile(urls.isMobile);
+      setIsIOS(urls.isIOS);
+      setIsAndroid(urls.isAndroid);
+      if (typeof navigator.share === 'function') {
+        setCanShare(true);
+      }
+    }
+  }, [shareUrl, message]);
 
   if (!isOpen) return null;
 
   const handleCopyAgain = async () => {
     try {
-      await navigator.clipboard.writeText(message);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(message);
+      }
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch (e) {
@@ -30,11 +61,80 @@ export default function LinkedInModal({
     }
   };
 
+  const handleOpenLinkedInApp = async () => {
+    const urls = getLinkedInShareUrls(shareUrl, message);
+
+    if (urls.isAndroid) {
+      // Android: launch Chrome intent targeting com.linkedin.android ACTION_SEND
+      // Opens LinkedIn App post composer directly with text and url pre-filled,
+      // and automatically falls back to mobile web if LinkedIn app is not installed.
+      window.location.href = urls.androidIntentUrl;
+      onConfirmOpenLinkedIn(urls.androidIntentUrl);
+      return;
+    }
+
+    if (urls.isIOS) {
+      // iOS: Try native share sheet first (Apple's official app-to-app bridge)
+      if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+        try {
+          await navigator.share({
+            title: 'Niva Bupa Claim Experience',
+            text: message,
+            url: shareUrl || window.location.href,
+          });
+          onConfirmOpenLinkedIn();
+          return;
+        } catch (err: unknown) {
+          if ((err as Error)?.name === 'AbortError') {
+            return;
+          }
+          console.warn('Native share dismissed or failed, attempting scheme:', err);
+        }
+      }
+
+      // iOS Fallback: attempt linkedin:// custom scheme with timer fallback to mobile web
+      window.location.href = urls.iosSchemeUrl;
+      setTimeout(() => {
+        window.location.href = urls.webFallbackUrl;
+      }, 1500);
+      onConfirmOpenLinkedIn(urls.iosSchemeUrl);
+      return;
+    }
+
+    // Desktop fallback: Open web offsite sharer
+    onConfirmOpenLinkedIn(urls.webFallbackUrl);
+  };
+
+  const handleOpenWebFallback = () => {
+    const urls = getLinkedInShareUrls(shareUrl, message);
+    if (typeof window !== 'undefined') {
+      window.open(urls.webFallbackUrl, '_blank', 'noopener,noreferrer');
+    }
+    onConfirmOpenLinkedIn(urls.webFallbackUrl);
+  };
+
+  const handleNativeShareSheet = async () => {
+    if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+      try {
+        await navigator.share({
+          title: 'Niva Bupa Claim Experience',
+          text: message,
+          url: shareUrl || (typeof window !== 'undefined' ? window.location.href : ''),
+        });
+        onConfirmOpenLinkedIn();
+      } catch (err: unknown) {
+        if ((err as Error)?.name !== 'AbortError') {
+          console.warn('Share error:', err);
+        }
+      }
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-200">
+      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-200 max-h-[94vh] flex flex-col">
         {/* LinkedIn Branded Header */}
-        <div className="bg-[#0A66C2] p-5 text-white flex items-center justify-between">
+        <div className="bg-[#0A66C2] p-5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center">
               <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
@@ -42,8 +142,14 @@ export default function LinkedInModal({
               </svg>
             </div>
             <div>
-              <h3 className="text-base font-bold">Ready to Post on LinkedIn</h3>
-              <p className="text-xs text-white/90">Message copied to your clipboard</p>
+              <h3 className="text-base font-bold">
+                {isMobile ? 'Open in LinkedIn App' : 'Ready to Post on LinkedIn'}
+              </h3>
+              <p className="text-xs text-white/90">
+                {isMobile
+                  ? 'Direct mobile app access for iOS & Android'
+                  : 'Message copied to your clipboard'}
+              </p>
             </div>
           </div>
           <button
@@ -56,7 +162,7 @@ export default function LinkedInModal({
         </div>
 
         {/* Content Body */}
-        <div className="p-5 sm:p-6 space-y-4">
+        <div className="p-5 sm:p-6 space-y-4 overflow-y-auto">
           {/* Success Banner: Copied to Clipboard */}
           <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
@@ -68,78 +174,103 @@ export default function LinkedInModal({
                   Your message has been copied!
                 </span>
                 <span className="text-[11px] text-emerald-700">
-                  Ready to paste into your LinkedIn post
+                  Ready to paste or share directly into LinkedIn
                 </span>
               </div>
             </div>
             <button
               onClick={handleCopyAgain}
-              className="text-xs font-medium text-emerald-700 hover:text-emerald-900 flex items-center gap-1 cursor-pointer px-2 py-1 rounded bg-emerald-100/60 hover:bg-emerald-200/60 transition-colors"
+              className="text-xs font-medium text-emerald-700 hover:text-emerald-900 flex items-center gap-1 cursor-pointer px-2.5 py-1 rounded-lg bg-emerald-100/60 hover:bg-emerald-200/60 transition-colors"
             >
               <Copy className="w-3.5 h-3.5" />
               <span>{copied ? 'Copied' : 'Copy again'}</span>
             </button>
           </div>
 
-          {/* Explanation Callout: Why LinkedIn does this */}
-          <div className="p-3 rounded-xl bg-amber-50/80 border border-amber-200 text-xs text-amber-900 flex items-start gap-2.5">
-            <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-            <p className="leading-relaxed">
-              <strong>Why doesn&apos;t the text appear automatically?</strong> LinkedIn&apos;s anti-spam security policy blocks external websites from automatically filling your post text. You only need to paste your copied message!
-            </p>
-          </div>
+          {/* Mobile device indicator callout */}
+          {isMobile ? (
+            <div className="p-3.5 rounded-2xl bg-sky-50/90 border border-sky-200 text-xs text-sky-950 flex items-start gap-2.5">
+              <Smartphone className="w-4 h-4 text-[#0A66C2] shrink-0 mt-0.5" />
+              <div className="space-y-1">
+                <p className="font-semibold text-slate-900">
+                  {isAndroid ? 'Android Device Detected' : isIOS ? 'iPhone / iOS Device Detected' : 'Mobile Device Detected'}
+                </p>
+                <p className="text-slate-600 leading-relaxed text-[11px]">
+                  Tapping <strong>&ldquo;Open in LinkedIn App&rdquo;</strong> will launch the official LinkedIn application on your phone so you can post without entering your password into the browser.
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="p-3 rounded-xl bg-amber-50/80 border border-amber-200 text-xs text-amber-900 flex items-start gap-2.5">
+              <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+              <p className="leading-relaxed">
+                <strong>Why doesn&apos;t web text pre-fill automatically?</strong> LinkedIn&apos;s anti-spam policy blocks web pages from injecting post body text. You only need to paste (Ctrl+V / Cmd+V) your copied message!
+              </p>
+            </div>
+          )}
 
           {/* Message Preview */}
           <div className="space-y-1.5">
-            <span className="text-xs font-semibold text-slate-700">Copied Message Preview:</span>
+            <span className="text-xs font-semibold text-slate-700">Advocacy Message Preview:</span>
             <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 italic max-h-24 overflow-y-auto whitespace-pre-wrap">
               &ldquo;{message}&rdquo;
             </div>
           </div>
 
-          {/* Clear 2-Step Instructions */}
-          <div className="space-y-2 text-xs text-slate-600 bg-sky-50/50 p-3.5 rounded-xl border border-sky-100">
-            <div className="flex items-start gap-2.5">
-              <span className="w-5 h-5 rounded-full bg-[#0A66C2] text-white font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">
-                1
-              </span>
-              <span>
-                Click <strong>&ldquo;Open LinkedIn &amp; Paste&rdquo;</strong> below. Your claim card preview will load automatically.
-              </span>
-            </div>
-            <div className="flex items-start gap-2.5">
-              <span className="w-5 h-5 rounded-full bg-[#0A66C2] text-white font-bold text-[11px] flex items-center justify-center shrink-0 mt-0.5">
-                2
-              </span>
-              <div className="flex items-center gap-1.5 flex-wrap">
-                <span>Click into the LinkedIn post box and press</span>
-                <kbd className="px-1.5 py-0.5 rounded bg-white border border-slate-300 font-mono text-[11px] font-semibold text-slate-800 shadow-2xs">
-                  Ctrl + V
-                </kbd>
-                <span>or</span>
-                <kbd className="px-1.5 py-0.5 rounded bg-white border border-slate-300 font-mono text-[11px] font-semibold text-slate-800 shadow-2xs">
-                  Cmd + V
-                </kbd>
-                <span>to paste your message!</span>
-              </div>
-            </div>
-          </div>
-
           {/* Action Buttons */}
           <div className="space-y-2 pt-2">
-            <button
-              type="button"
-              onClick={onConfirmOpenLinkedIn}
-              className="w-full min-h-[48px] py-3 px-4 rounded-xl font-bold text-white bg-[#0A66C2] hover:bg-[#004182] shadow-md flex items-center justify-center gap-2 text-sm cursor-pointer transition-colors"
-            >
-              <span>Open LinkedIn &amp; Paste</span>
-              <ArrowRight className="w-4 h-4 ml-1" />
-            </button>
+            {isMobile ? (
+              <>
+                {/* Primary Mobile App Button */}
+                <button
+                  type="button"
+                  onClick={handleOpenLinkedInApp}
+                  className="w-full min-h-[50px] py-3 px-4 rounded-xl font-bold text-white bg-[#0A66C2] hover:bg-[#004182] shadow-md flex items-center justify-center gap-2.5 text-sm cursor-pointer transition-colors"
+                >
+                  <Smartphone className="w-4 h-4 text-white" />
+                  <span>Open in LinkedIn App</span>
+                  <ArrowRight className="w-4 h-4 ml-1 opacity-90" />
+                </button>
+
+                {/* Additional Native Share Sheet if available */}
+                {canShare && !isAndroid && (
+                  <button
+                    type="button"
+                    onClick={handleNativeShareSheet}
+                    className="w-full min-h-[44px] py-2.5 px-4 rounded-xl font-semibold text-white bg-[#0A192F] hover:bg-[#1E293B] shadow-xs flex items-center justify-center gap-2 text-xs cursor-pointer transition-colors"
+                  >
+                    <Share2 className="w-3.5 h-3.5 text-sky-400" />
+                    <span>Share via Device Share Sheet</span>
+                  </button>
+                )}
+
+                {/* Mobile Web Browser Fallback */}
+                <button
+                  type="button"
+                  onClick={handleOpenWebFallback}
+                  className="w-full py-2.5 px-4 rounded-xl font-medium text-slate-700 hover:bg-slate-100 border border-slate-200 flex items-center justify-center gap-2 text-xs transition-colors cursor-pointer"
+                >
+                  <Globe className="w-3.5 h-3.5 text-slate-500" />
+                  <span>Open in Web Browser (linkedin.com)</span>
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                </button>
+              </>
+            ) : (
+              /* Desktop Flow */
+              <button
+                type="button"
+                onClick={() => onConfirmOpenLinkedIn()}
+                className="w-full min-h-[48px] py-3 px-4 rounded-xl font-bold text-white bg-[#0A66C2] hover:bg-[#004182] shadow-md flex items-center justify-center gap-2 text-sm cursor-pointer transition-colors"
+              >
+                <span>Open LinkedIn &amp; Paste</span>
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </button>
+            )}
 
             <button
               type="button"
               onClick={onClose}
-              className="w-full py-2.5 px-4 rounded-xl font-medium text-slate-600 hover:bg-slate-100 border border-slate-200 flex items-center justify-center text-xs transition-colors cursor-pointer"
+              className="w-full py-2 px-4 rounded-xl font-medium text-slate-500 hover:bg-slate-100 flex items-center justify-center text-xs transition-colors cursor-pointer"
             >
               Cancel
             </button>

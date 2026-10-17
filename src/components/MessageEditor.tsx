@@ -184,7 +184,7 @@ export default function MessageEditor({
           )}
           {platform === 'linkedin' && (
             <p>
-              <strong>LinkedIn note:</strong> LinkedIn prevents external websites from automatically filling post text. Clicking &ldquo;Share Now&rdquo; copies this message to your clipboard so you can paste (Ctrl+V / Cmd+V) directly into your LinkedIn post.
+              <strong>LinkedIn note:</strong> On mobile devices (iOS &amp; Android), this opens the official LinkedIn app directly with your advocacy post. Your message is also copied to your clipboard.
             </p>
           )}
           {platform === 'x' && (

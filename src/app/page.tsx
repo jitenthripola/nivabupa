@@ -205,20 +205,19 @@ function AdvocacyJourneyPage() {
   };
 
   // Safely open destination platform URL.
-  // In iPhone / iPad Safari, window.open() inside asynchronous chains is blocked by WebKit's popup blocker.
-  // Direct top-level navigation (window.location.href) bypasses the popup blocker and ensures
-  // first-party cookies are maintained so logged-in Facebook sessions are properly recognized.
+  // In mobile browsers (iPhone, iPad, Android), window.open() inside asynchronous chains is blocked by popup blockers,
+  // and custom app schemes (intent://, linkedin://) require direct top-level navigation (window.location.href).
   const openUrlInNewTab = (url: string) => {
     if (typeof window === 'undefined' || !url) return;
 
-    // Detect iOS devices (iPhone, iPad, iPod, or modern iPadOS reporting MacIntel with touch)
-    const isIOS =
-      /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    // Detect mobile devices (iPhone, iPad, iPod, Android)
+    const isMobile =
+      /iPad|iPhone|iPod|Android/i.test(navigator.userAgent) ||
       (typeof navigator.platform === 'string' &&
         navigator.platform === 'MacIntel' &&
         navigator.maxTouchPoints > 1);
 
-    if (isIOS) {
+    if (isMobile) {
       window.location.href = url;
       return;
     }
@@ -231,16 +230,19 @@ function AdvocacyJourneyPage() {
   };
 
   // LinkedIn confirm handler
-  const handleLinkedInConfirmed = () => {
+  const handleLinkedInConfirmed = (customUrl?: string) => {
     setShowLinkedInModal(false);
     markSharedSuccessfully();
     trackEvent('share_completed', 'linkedin', {
-      mode: 'web_intent',
-      shareUrl: pendingLinkedInUrl,
+      mode: customUrl ? 'app_deep_link' : 'web_intent',
+      shareUrl: customUrl || pendingLinkedInUrl,
     });
 
-    if (pendingLinkedInUrl) {
-      openUrlInNewTab(pendingLinkedInUrl);
+    const targetUrl = customUrl || pendingLinkedInUrl;
+    if (targetUrl) {
+      if (!targetUrl.startsWith('intent://') && !targetUrl.startsWith('linkedin://')) {
+        openUrlInNewTab(targetUrl);
+      }
     }
   };
 
@@ -347,6 +349,7 @@ function AdvocacyJourneyPage() {
       <LinkedInModal
         isOpen={showLinkedInModal}
         message={personalizedMessage}
+        shareUrl={generatedShareData?.shareUrl || ''}
         onClose={() => setShowLinkedInModal(false)}
         onConfirmOpenLinkedIn={handleLinkedInConfirmed}
       />
