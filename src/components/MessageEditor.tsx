@@ -184,7 +184,7 @@ export default function MessageEditor({
           )}
           {platform === 'linkedin' && (
             <p>
-              <strong>LinkedIn note:</strong> On mobile devices (iOS &amp; Android), this opens the official LinkedIn app directly with your advocacy post. Your message is also copied to your clipboard.
+              <strong>LinkedIn note:</strong> Opens LinkedIn&apos;s Create Post composer directly on mobile and desktop. Your message is also copied to your clipboard.
             </p>
           )}
           {platform === 'x' && (

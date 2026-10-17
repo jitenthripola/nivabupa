@@ -16,13 +16,22 @@ export function buildPlatformIntent(
   const encodedText = encodeURIComponent(personalizedText);
 
   switch (platform) {
-    case 'linkedin':
+    case 'linkedin': {
+      const fullText = personalizedText
+        ? shareUrl && !personalizedText.includes(shareUrl)
+          ? `${personalizedText}\n\n${shareUrl}`
+          : personalizedText
+        : shareUrl;
+      const encodedFullText = encodeURIComponent(fullText);
+
       return {
-        intentUrl: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+        // Direct link to LinkedIn's "Create a post" composer modal on desktop and mobile web
+        intentUrl: `https://www.linkedin.com/feed/?shareActive=true&text=${encodedFullText}`,
         mobileAppUrl: 'linkedin://',
         requiresClipboardCopy: true, // Also copy so users can paste in the LinkedIn post body
-        instructions: 'We are opening LinkedIn. Your message has also been copied to your clipboard to paste into your update.',
+        instructions: 'Opening LinkedIn Create Post. Your message has also been copied to your clipboard.',
       };
+    }
 
     case 'x':
       return {
@@ -81,15 +90,20 @@ export interface LinkedInShareUrls {
  * with graceful fallback to LinkedIn's official web sharer.
  */
 export function getLinkedInShareUrls(shareUrl: string, message: string): LinkedInShareUrls {
-  const encodedUrl = encodeURIComponent(shareUrl);
-  const webFallbackUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
-  const fullText = message ? `${message}\n\n${shareUrl}` : shareUrl;
+  const fullText = message
+    ? shareUrl && !message.includes(shareUrl)
+      ? `${message}\n\n${shareUrl}`
+      : message
+    : shareUrl;
+  const encodedFullText = encodeURIComponent(fullText);
+  // Official LinkedIn feed URL with shareActive=true to automatically open the Create Post composer modal
+  const webFallbackUrl = `https://www.linkedin.com/feed/?shareActive=true&text=${encodedFullText}`;
 
   // Android Chrome Intent: Opens LinkedIn app ACTION_SEND composer directly with text & url,
-  // falling back to mobile web if LinkedIn app is not installed.
-  const androidIntentUrl = `intent://#Intent;action=android.intent.action.SEND;package=com.linkedin.android;type=text/plain;S.android.intent.extra.TEXT=${encodeURIComponent(
-    fullText
-  )};S.browser_fallback_url=${encodeURIComponent(webFallbackUrl)};end;`;
+  // falling back to mobile web Create Post if LinkedIn app is not installed.
+  const androidIntentUrl = `intent://#Intent;action=android.intent.action.SEND;package=com.linkedin.android;type=text/plain;S.android.intent.extra.TEXT=${encodedFullText};S.browser_fallback_url=${encodeURIComponent(
+    webFallbackUrl
+  )};end;`;
 
   // iOS LinkedIn custom URL scheme
   const iosSchemeUrl = 'linkedin://';

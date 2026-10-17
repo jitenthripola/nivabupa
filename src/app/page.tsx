@@ -223,10 +223,15 @@ function AdvocacyJourneyPage() {
           personalizedMessage
         );
         const linkedInUrls = getLinkedInShareUrls(shareData.shareUrl, personalizedMessage);
+        const fullShareText = personalizedMessage
+          ? shareData.shareUrl && !personalizedMessage.includes(shareData.shareUrl)
+            ? `${personalizedMessage}\n\n${shareData.shareUrl}`
+            : personalizedMessage
+          : shareData.shareUrl;
 
         // Copy message to clipboard without blocking navigation gesture
         if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(personalizedMessage).catch((clipErr) => {
+          navigator.clipboard.writeText(fullShareText).catch((clipErr) => {
             console.warn('Clipboard write error:', clipErr);
           });
         }
@@ -239,28 +244,14 @@ function AdvocacyJourneyPage() {
           shareUrl: shareData.shareUrl,
         });
 
-        // Android: Directly open LinkedIn via Chrome intent (opens app or falls back to web without popup)
+        // Android: Directly open LinkedIn via Chrome intent (opens native Create Post composer directly,
+        // or falls back to web Create Post if app is not installed)
         if (linkedInUrls.isAndroid) {
           window.location.href = linkedInUrls.androidIntentUrl;
           return;
         }
 
-        // iOS: Directly open the LinkedIn app via its registered native URL scheme.
-        // If the LinkedIn app is not installed, gracefully fall back to the mobile web sharer.
-        if (linkedInUrls.isIOS) {
-          const startTime = Date.now();
-          window.location.href = linkedInUrls.iosSchemeUrl;
-
-          setTimeout(() => {
-            // Only redirect to web if the user hasn't switched to the LinkedIn app
-            if (!document.hidden && Date.now() - startTime < 3500) {
-              window.location.href = intent.intentUrl;
-            }
-          }, 1500);
-          return;
-        }
-
-        // Desktop: directly open in same tab
+        // iOS & Desktop: Open LinkedIn Create Post directly via feed/?shareActive=true
         openUrlInNewTab(intent.intentUrl);
         return;
       }

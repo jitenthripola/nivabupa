@@ -92,16 +92,13 @@ export default function LinkedInModal({
         }
       }
 
-      // iOS Fallback: attempt linkedin:// custom scheme with timer fallback to mobile web
-      window.location.href = urls.iosSchemeUrl;
-      setTimeout(() => {
-        window.location.href = urls.webFallbackUrl;
-      }, 1500);
-      onConfirmOpenLinkedIn(urls.iosSchemeUrl);
+      // iOS Fallback: open LinkedIn Create Post
+      window.location.href = urls.webFallbackUrl;
+      onConfirmOpenLinkedIn(urls.webFallbackUrl);
       return;
     }
 
-    // Desktop fallback: Open web offsite sharer
+    // Desktop: Open web Create Post
     onConfirmOpenLinkedIn(urls.webFallbackUrl);
   };
 
