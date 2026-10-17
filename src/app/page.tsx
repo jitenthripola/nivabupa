@@ -46,6 +46,35 @@ function AdvocacyJourneyPage() {
     }
   }, []);
 
+  // Pre-fetch share link in background so user tap triggers instantaneous navigation on iOS/mobile
+  useEffect(() => {
+    let isMounted = true;
+    const fetchLink = async () => {
+      try {
+        const res = await fetch('/api/generate-share-link', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            claimId: MOCK_CLAIM_DATA.encryptedClaimId,
+            userId: MOCK_CLAIM_DATA.encryptedUserId,
+            platform: selectedPlatform,
+            message: personalizedMessage,
+          }),
+        });
+        if (res.ok && isMounted) {
+          const data = await res.json();
+          setGeneratedShareData(data);
+        }
+      } catch {
+        // Silently ignore prefetch errors
+      }
+    };
+    fetchLink();
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedPlatform, personalizedMessage]);
+
   const markSharedSuccessfully = () => {
     setHasSharedSuccessfully(true);
     if (typeof window !== 'undefined') {
@@ -102,24 +131,32 @@ function AdvocacyJourneyPage() {
     });
 
     try {
-      // 1. Request secure tracking link from backend API
-      const res = await fetch('/api/generate-share-link', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          claimId: MOCK_CLAIM_DATA.encryptedClaimId,
-          userId: MOCK_CLAIM_DATA.encryptedUserId,
-          platform: selectedPlatform,
-          message: personalizedMessage,
-        }),
-      });
+      // 1. Use pre-fetched share link or request live tracking link
+      let shareData: ShareLinkResponse | null = generatedShareData;
+      if (!shareData) {
+        const res = await fetch('/api/generate-share-link', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            claimId: MOCK_CLAIM_DATA.encryptedClaimId,
+            userId: MOCK_CLAIM_DATA.encryptedUserId,
+            platform: selectedPlatform,
+            message: personalizedMessage,
+          }),
+        });
 
-      if (!res.ok) {
-        throw new Error('Failed to generate secure share link');
+        if (!res.ok) {
+          throw new Error('Failed to generate secure share link');
+        }
+
+        const data: ShareLinkResponse = await res.json();
+        setGeneratedShareData(data);
+        shareData = data;
       }
 
-      const shareData: ShareLinkResponse = await res.json();
-      setGeneratedShareData(shareData);
+      if (!shareData) {
+        throw new Error('Failed to obtain share data');
+      }
 
       // Track handoff
       trackEvent('share_handoff', selectedPlatform, {
@@ -148,12 +185,10 @@ function AdvocacyJourneyPage() {
         );
         const youtubeUrls = getYouTubeShareUrls(shareData.shareUrl, personalizedMessage);
 
-        try {
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            await navigator.clipboard.writeText(personalizedMessage);
-          }
-        } catch (clipErr) {
-          console.warn('Clipboard write error:', clipErr);
+        if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(personalizedMessage).catch((clipErr) => {
+            console.warn('Clipboard write error:', clipErr);
+          });
         }
 
         setIsShareLoading(false);
@@ -170,30 +205,13 @@ function AdvocacyJourneyPage() {
           return;
         }
 
+        // iOS: Directly open YouTube Universal Link without any popup
         if (youtubeUrls.isIOS) {
-          if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
-            try {
-              await navigator.share({
-                title: 'Niva Bupa Health Insurance Testimonial',
-                text: personalizedMessage,
-                url: shareData.shareUrl,
-              });
-              return;
-            } catch (shareErr: unknown) {
-              if ((shareErr as Error)?.name === 'AbortError') {
-                return;
-              }
-            }
-          }
-          // Direct fallback to iOS YouTube app scheme or web upload
-          window.location.href = youtubeUrls.iosSchemeUrl;
-          setTimeout(() => {
-            window.location.href = youtubeUrls.webFallbackUrl;
-          }, 1500);
+          openUrlInNewTab(youtubeUrls.webFallbackUrl);
           return;
         }
 
-        // Desktop: directly open YouTube upload in new tab
+        // Desktop: directly open YouTube upload in same tab
         openUrlInNewTab(intent.intentUrl);
         return;
       }
@@ -206,12 +224,11 @@ function AdvocacyJourneyPage() {
         );
         const linkedInUrls = getLinkedInShareUrls(shareData.shareUrl, personalizedMessage);
 
-        try {
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            await navigator.clipboard.writeText(personalizedMessage);
-          }
-        } catch (clipErr) {
-          console.warn('Clipboard write error:', clipErr);
+        // Copy message to clipboard without blocking navigation gesture
+        if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(personalizedMessage).catch((clipErr) => {
+            console.warn('Clipboard write error:', clipErr);
+          });
         }
 
         setIsShareLoading(false);
@@ -222,32 +239,15 @@ function AdvocacyJourneyPage() {
           shareUrl: shareData.shareUrl,
         });
 
-        // Directly open LinkedIn on mobile (Android App intent or iOS share sheet / redirect) without modal
+        // Android: Directly open LinkedIn via Chrome intent (opens app or falls back to web without popup)
         if (linkedInUrls.isAndroid) {
           window.location.href = linkedInUrls.androidIntentUrl;
           return;
         }
 
-        if (linkedInUrls.isIOS) {
-          if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
-            try {
-              await navigator.share({
-                title: 'Niva Bupa Claim Experience',
-                text: personalizedMessage,
-                url: shareData.shareUrl,
-              });
-              return;
-            } catch (shareErr: unknown) {
-              if ((shareErr as Error)?.name === 'AbortError') {
-                return;
-              }
-            }
-          }
-          openUrlInNewTab(intent.intentUrl);
-          return;
-        }
-
-        // Desktop: directly open in new tab (similar to Facebook)
+        // iOS & Desktop: Directly navigate to LinkedIn HTTPS Universal Link without any popup.
+        // On iOS: Universal Link opens the LinkedIn app directly if installed,
+        // or mobile Safari if not installed, without showing any popup.
         openUrlInNewTab(intent.intentUrl);
         return;
       }
