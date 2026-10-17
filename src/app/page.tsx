@@ -245,9 +245,22 @@ function AdvocacyJourneyPage() {
           return;
         }
 
-        // iOS & Desktop: Directly navigate to LinkedIn HTTPS Universal Link without any popup.
-        // On iOS: Universal Link opens the LinkedIn app directly if installed,
-        // or mobile Safari if not installed, without showing any popup.
+        // iOS: Directly open the LinkedIn app via its registered native URL scheme.
+        // If the LinkedIn app is not installed, gracefully fall back to the mobile web sharer.
+        if (linkedInUrls.isIOS) {
+          const startTime = Date.now();
+          window.location.href = linkedInUrls.iosSchemeUrl;
+
+          setTimeout(() => {
+            // Only redirect to web if the user hasn't switched to the LinkedIn app
+            if (!document.hidden && Date.now() - startTime < 3500) {
+              window.location.href = intent.intentUrl;
+            }
+          }, 1500);
+          return;
+        }
+
+        // Desktop: directly open in same tab
         openUrlInNewTab(intent.intentUrl);
         return;
       }
