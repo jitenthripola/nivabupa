@@ -174,7 +174,7 @@ export default function MessageEditor({
           )}
           {platform === 'youtube' && (
             <p>
-              <strong>YouTube note:</strong> Ready to share a video review or Short? Your review text and hashtags will be copied to clipboard so you can paste them into your video description.
+              <strong>YouTube note:</strong> On mobile devices (iOS &amp; Android), this opens the official YouTube app directly. Your recommended title, review text, and hashtags are copied to your clipboard.
             </p>
           )}
           {platform === 'facebook' && (

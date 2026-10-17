@@ -108,7 +108,7 @@ export default function LinkedInModal({
   const handleOpenWebFallback = () => {
     const urls = getLinkedInShareUrls(shareUrl, message);
     if (typeof window !== 'undefined') {
-      window.open(urls.webFallbackUrl, '_blank', 'noopener,noreferrer');
+      window.location.href = urls.webFallbackUrl;
     }
     onConfirmOpenLinkedIn(urls.webFallbackUrl);
   };

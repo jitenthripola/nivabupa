@@ -123,3 +123,57 @@ export function getLinkedInShareUrls(shareUrl: string, message: string): LinkedI
     webFallbackUrl,
   };
 }
+
+export interface YouTubeShareUrls {
+  isMobile: boolean;
+  isIOS: boolean;
+  isAndroid: boolean;
+  androidIntentUrl: string;
+  iosSchemeUrl: string;
+  webFallbackUrl: string;
+}
+
+/**
+ * Builds mobile app deep links for YouTube across iOS & Android,
+ * with graceful fallback to YouTube Studio/Upload on the web.
+ */
+export function getYouTubeShareUrls(shareUrl: string, message: string): YouTubeShareUrls {
+  const webFallbackUrl = 'https://www.youtube.com/upload';
+
+  // Android Chrome Intent: Opens the official YouTube app, falling back to upload URL
+  const androidIntentUrl = `intent://www.youtube.com/#Intent;package=com.google.android.youtube;scheme=https;S.browser_fallback_url=${encodeURIComponent(
+    webFallbackUrl
+  )};end;`;
+
+  // iOS YouTube custom URL scheme (vnd.youtube:// is the registered scheme for the YouTube app on iOS)
+  const iosSchemeUrl = 'vnd.youtube://';
+
+  if (typeof window === 'undefined' || typeof navigator === 'undefined') {
+    return {
+      isMobile: false,
+      isIOS: false,
+      isAndroid: false,
+      androidIntentUrl,
+      iosSchemeUrl,
+      webFallbackUrl,
+    };
+  }
+
+  const ua = navigator.userAgent || '';
+  const isAndroid = /Android/i.test(ua);
+  const isIOS =
+    /iPad|iPhone|iPod/.test(ua) ||
+    (typeof navigator.platform === 'string' &&
+      navigator.platform === 'MacIntel' &&
+      navigator.maxTouchPoints > 1);
+  const isMobile = isAndroid || isIOS || /webOS|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+
+  return {
+    isMobile,
+    isIOS,
+    isAndroid,
+    androidIntentUrl,
+    iosSchemeUrl,
+    webFallbackUrl,
+  };
+}

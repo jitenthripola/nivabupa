@@ -60,41 +60,51 @@ export default function PlatformCard({
       id={`platform-btn-${platform.id}`}
       aria-label={`Share on ${platform.name}`}
       aria-pressed={isSelected}
-      className={`group relative flex flex-col items-center justify-center p-4 rounded-2xl transition-all duration-200 cursor-pointer text-center select-none outline-hidden focus-visible:ring-4 focus-visible:ring-sky-200 ${isSelected
-          ? 'bg-gradient-to-b from-sky-50/90 to-blue-50/70 border-2 border-[#009FE3] shadow-md shadow-sky-500/15 translate-y-[-2px]'
+      style={{ touchAction: 'manipulation' }}
+      className={`group relative flex md:flex-col flex-row items-center justify-between md:justify-center w-full p-3 sm:p-4 rounded-2xl transition-all duration-150 cursor-pointer text-left md:text-center select-none outline-hidden focus-visible:ring-4 focus-visible:ring-sky-200 active:opacity-90 ${isSelected
+          ? 'bg-gradient-to-r md:bg-gradient-to-b from-sky-50/90 to-blue-50/70 border-2 border-[#009FE3] shadow-md shadow-sky-500/15'
           : 'bg-white border border-slate-200 hover:border-sky-300 hover:bg-slate-50/70 hover:shadow-xs'
         }`}
     >
-      {/* Selection indicator pill */}
-      {isSelected && (
-        <span className="absolute top-2 right-2 w-5 h-5 rounded-full bg-[#009FE3] text-white flex items-center justify-center shadow-xs animate-in zoom-in-50 duration-150">
-          <Check className="w-3.5 h-3.5 stroke-[2.5]" />
-        </span>
-      )}
+      <div className="flex md:flex-col items-center gap-3 md:gap-0">
+        {/* Platform Icon with brand accent tint on hover/active */}
+        <div
+          className={`w-11 h-11 md:w-12 md:h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105 ${isSelected
+              ? 'bg-white shadow-xs text-[#009FE3]'
+              : 'bg-slate-100 text-slate-700 group-hover:bg-sky-50 group-hover:text-[#0077C8]'
+            }`}
+          style={isSelected ? { color: platform.brandColor } : undefined}
+        >
+          {renderIcon()}
+        </div>
 
-      {/* Platform Icon with brand accent tint on hover/active */}
-      <div
-        className={`w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-200 group-hover:scale-105 ${isSelected
-            ? 'bg-white shadow-xs text-[#009FE3]'
-            : 'bg-slate-100 text-slate-700 group-hover:bg-sky-50 group-hover:text-[#0077C8]'
-          }`}
-        style={isSelected ? { color: platform.brandColor } : undefined}
-      >
-        {renderIcon()}
+        {/* Text Details */}
+        <div className="flex flex-col md:items-center">
+          {/* Platform Name */}
+          <span
+            className={`md:mt-2.5 text-sm font-bold tracking-tight transition-colors ${isSelected ? 'text-[#0A192F]' : 'text-slate-700 group-hover:text-slate-900'
+              }`}
+          >
+            {platform.name}
+          </span>
+
+          {/* Tagline / subtext */}
+          <span className="text-[11px] text-slate-500 leading-tight">
+            {platform.tagline}
+          </span>
+        </div>
       </div>
 
-      {/* Platform Name */}
-      <span
-        className={`mt-2.5 text-sm font-bold tracking-tight transition-colors ${isSelected ? 'text-[#0A192F]' : 'text-slate-700 group-hover:text-slate-900'
-          }`}
-      >
-        {platform.name}
-      </span>
-
-      {/* Tagline / subtext */}
-      <span className="mt-0.5 text-[11px] text-slate-500 leading-tight hidden sm:block">
-        {platform.tagline}
-      </span>
+      {/* Selection indicator pill */}
+      <div className="shrink-0 md:absolute md:top-2 md:right-2">
+        {isSelected ? (
+          <span className="w-5 h-5 rounded-full bg-[#009FE3] text-white flex items-center justify-center shadow-xs animate-in zoom-in-50 duration-150">
+            <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+          </span>
+        ) : (
+          <span className="md:hidden w-5 h-5 rounded-full border-2 border-slate-300 flex items-center justify-center" />
+        )}
+      </div>
     </button>
   );
 }

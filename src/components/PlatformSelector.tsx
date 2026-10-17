@@ -34,24 +34,17 @@ export default function PlatformSelector({
         </p>
       </div>
 
-      {/* Grid: 2 columns on mobile, 5 columns on desktop */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
-        {PLATFORMS_LIST.map((platform, idx) => {
-          // On mobile, the 5th item can span both columns to look centered and balanced
-          const isFifthOnMobile = idx === 4;
-          return (
-            <div
-              key={platform.id}
-              className={isFifthOnMobile ? 'col-span-2 md:col-span-1' : 'col-span-1'}
-            >
-              <PlatformCard
-                platform={platform}
-                isSelected={selectedPlatform === platform.id}
-                onSelect={onSelectPlatform}
-              />
-            </div>
-          );
-        })}
+      {/* Grid: 1 column (full width) on mobile, 5 columns on desktop */}
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-2.5 sm:gap-4">
+        {PLATFORMS_LIST.map((platform) => (
+          <div key={platform.id} className="w-full col-span-1">
+            <PlatformCard
+              platform={platform}
+              isSelected={selectedPlatform === platform.id}
+              onSelect={onSelectPlatform}
+            />
+          </div>
+        ))}
       </div>
     </section>
   );

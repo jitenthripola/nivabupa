@@ -18,7 +18,7 @@ import AnalyticsInspector from '@/components/AnalyticsInspector';
 import { AnalyticsProvider, useAnalytics } from '@/components/AnalyticsProvider';
 
 import { MOCK_CLAIM_DATA, DEFAULT_SHARE_MESSAGE } from '@/lib/mockData';
-import { buildPlatformIntent } from '@/lib/shareUrls';
+import { buildPlatformIntent, getLinkedInShareUrls, getYouTubeShareUrls } from '@/lib/shareUrls';
 import { SocialPlatform, ShareLinkResponse } from '@/types';
 
 function AdvocacyJourneyPage() {
@@ -141,14 +141,60 @@ function AdvocacyJourneyPage() {
       }
 
       if (selectedPlatform === 'youtube') {
-        // Copy description & hashtags to clipboard
+        const intent = buildPlatformIntent(
+          'youtube',
+          shareData.shareUrl,
+          personalizedMessage
+        );
+        const youtubeUrls = getYouTubeShareUrls(shareData.shareUrl, personalizedMessage);
+
         try {
-          await navigator.clipboard.writeText(personalizedMessage);
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(personalizedMessage);
+          }
         } catch (clipErr) {
           console.warn('Clipboard write error:', clipErr);
         }
+
         setIsShareLoading(false);
-        setShowYouTubeModal(true);
+        markSharedSuccessfully();
+
+        trackEvent('share_completed', 'youtube', {
+          mode: youtubeUrls.isMobile ? 'app_deep_link' : 'studio_upload',
+          shareUrl: shareData.shareUrl,
+        });
+
+        // Directly open YouTube on mobile without modal
+        if (youtubeUrls.isAndroid) {
+          window.location.href = youtubeUrls.androidIntentUrl;
+          return;
+        }
+
+        if (youtubeUrls.isIOS) {
+          if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+            try {
+              await navigator.share({
+                title: 'Niva Bupa Health Insurance Testimonial',
+                text: personalizedMessage,
+                url: shareData.shareUrl,
+              });
+              return;
+            } catch (shareErr: unknown) {
+              if ((shareErr as Error)?.name === 'AbortError') {
+                return;
+              }
+            }
+          }
+          // Direct fallback to iOS YouTube app scheme or web upload
+          window.location.href = youtubeUrls.iosSchemeUrl;
+          setTimeout(() => {
+            window.location.href = youtubeUrls.webFallbackUrl;
+          }, 1500);
+          return;
+        }
+
+        // Desktop: directly open YouTube upload in new tab
+        openUrlInNewTab(intent.intentUrl);
         return;
       }
 
@@ -158,14 +204,51 @@ function AdvocacyJourneyPage() {
           shareData.shareUrl,
           personalizedMessage
         );
+        const linkedInUrls = getLinkedInShareUrls(shareData.shareUrl, personalizedMessage);
+
         try {
-          await navigator.clipboard.writeText(personalizedMessage);
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(personalizedMessage);
+          }
         } catch (clipErr) {
           console.warn('Clipboard write error:', clipErr);
         }
-        setPendingLinkedInUrl(intent.intentUrl);
+
         setIsShareLoading(false);
-        setShowLinkedInModal(true);
+        markSharedSuccessfully();
+
+        trackEvent('share_completed', 'linkedin', {
+          mode: linkedInUrls.isMobile ? 'app_deep_link' : 'web_intent',
+          shareUrl: shareData.shareUrl,
+        });
+
+        // Directly open LinkedIn on mobile (Android App intent or iOS share sheet / redirect) without modal
+        if (linkedInUrls.isAndroid) {
+          window.location.href = linkedInUrls.androidIntentUrl;
+          return;
+        }
+
+        if (linkedInUrls.isIOS) {
+          if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+            try {
+              await navigator.share({
+                title: 'Niva Bupa Claim Experience',
+                text: personalizedMessage,
+                url: shareData.shareUrl,
+              });
+              return;
+            } catch (shareErr: unknown) {
+              if ((shareErr as Error)?.name === 'AbortError') {
+                return;
+              }
+            }
+          }
+          openUrlInNewTab(intent.intentUrl);
+          return;
+        }
+
+        // Desktop: directly open in new tab (similar to Facebook)
+        openUrlInNewTab(intent.intentUrl);
         return;
       }
 
@@ -204,29 +287,10 @@ function AdvocacyJourneyPage() {
     }
   };
 
-  // Safely open destination platform URL.
-  // In mobile browsers (iPhone, iPad, Android), window.open() inside asynchronous chains is blocked by popup blockers,
-  // and custom app schemes (intent://, linkedin://) require direct top-level navigation (window.location.href).
+  // Safely navigate to destination platform URL in the same tab (do not open in new tab for both mobile and desktop)
   const openUrlInNewTab = (url: string) => {
     if (typeof window === 'undefined' || !url) return;
-
-    // Detect mobile devices (iPhone, iPad, iPod, Android)
-    const isMobile =
-      /iPad|iPhone|iPod|Android/i.test(navigator.userAgent) ||
-      (typeof navigator.platform === 'string' &&
-        navigator.platform === 'MacIntel' &&
-        navigator.maxTouchPoints > 1);
-
-    if (isMobile) {
-      window.location.href = url;
-      return;
-    }
-
-    const popupWindow = window.open(url, '_blank', 'noopener,noreferrer');
-    // Fallback if popup blocker intercepted
-    if (!popupWindow || popupWindow.closed || typeof popupWindow.closed === 'undefined') {
-      window.location.href = url;
-    }
+    window.location.href = url;
   };
 
   // LinkedIn confirm handler
@@ -272,7 +336,7 @@ function AdvocacyJourneyPage() {
       <Header />
 
       {/* Main Single Page Content Container */}
-      <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6 sm:space-y-8">
+      <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6 sm:space-y-8 pb-28 sm:pb-8">
         {/* Verified Claim Summary Bar */}
         {/* <ClaimSummaryCard claim={MOCK_CLAIM_DATA} /> */}
 
@@ -344,6 +408,16 @@ function AdvocacyJourneyPage() {
           />
         </div>
       </main>
+
+      {/* Sticky Mobile Share Bar */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 p-3 shadow-lg pb-[max(12px,env(safe-area-inset-bottom))]">
+        <ShareButton
+          platform={selectedPlatform}
+          isLoading={isShareLoading}
+          onShare={handleInitiateShare}
+          isStickyMobile={true}
+        />
+      </div>
 
       {/* Platform Modals */}
       <LinkedInModal
