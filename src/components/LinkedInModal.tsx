@@ -64,21 +64,16 @@ export default function LinkedInModal({
   const handleOpenLinkedInApp = async () => {
     const urls = getLinkedInShareUrls(shareUrl, message);
 
-    if (urls.isMobile && typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
-      try {
-        await navigator.share({
-          title: 'Niva Bupa Claim Experience',
-          text: message,
-          url: shareUrl || (typeof window !== 'undefined' ? window.location.href : ''),
-        });
-        onConfirmOpenLinkedIn();
-        return;
-      } catch (err: unknown) {
-        if ((err as Error)?.name === 'AbortError') {
-          return;
-        }
-        console.warn('Native share dismissed or failed, attempting web composer:', err);
-      }
+    if (urls.isAndroid) {
+      window.location.href = urls.androidIntentUrl;
+      onConfirmOpenLinkedIn(urls.androidIntentUrl);
+      return;
+    }
+
+    if (urls.isIOS) {
+      window.location.href = urls.mobileDirectUrl;
+      onConfirmOpenLinkedIn(urls.mobileDirectUrl);
+      return;
     }
 
     // Web fallback: Open LinkedIn web Create Post

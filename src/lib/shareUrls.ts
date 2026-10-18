@@ -82,31 +82,40 @@ export interface LinkedInShareUrls {
   isAndroid: boolean;
   androidIntentUrl: string;
   iosSchemeUrl: string;
+  mobileDirectUrl: string;
   webFallbackUrl: string;
 }
 
 /**
- * Builds mobile app deep links for LinkedIn across iOS & Android,
- * with graceful fallback to LinkedIn's official web sharer.
+ * Builds direct mobile app deep links for LinkedIn across iOS & Android,
+ * directly opening the native LinkedIn app's Create Post composer without any intermediate modal.
  */
 export function getLinkedInShareUrls(shareUrl: string, message: string): LinkedInShareUrls {
+  const encodedShareUrl = encodeURIComponent(shareUrl);
+  const encodedMessage = encodeURIComponent(message);
   const fullText = message
     ? shareUrl && !message.includes(shareUrl)
       ? `${message}\n\n${shareUrl}`
       : message
     : shareUrl;
   const encodedFullText = encodeURIComponent(fullText);
-  // Official LinkedIn feed URL with shareActive=true to automatically open the Create Post composer modal
+
+  // Desktop web Create Post URL: opens feed with Create Post modal active
   const webFallbackUrl = `https://www.linkedin.com/feed/?shareActive=true&text=${encodedFullText}`;
 
-  // Android Chrome Intent: Opens LinkedIn app ACTION_SEND composer directly with text & url,
-  // falling back to mobile web Create Post if LinkedIn app is not installed.
-  const androidIntentUrl = `intent://#Intent;action=android.intent.action.SEND;package=com.linkedin.android;type=text/plain;S.android.intent.extra.TEXT=${encodedFullText};S.browser_fallback_url=${encodeURIComponent(
+  // Direct mobile Universal Link for iOS: targets "shareArticle" route in LinkedIn's official AASA to open LinkedIn app directly
+  const mobileDirectUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedShareUrl}&summary=${encodedMessage}&title=${encodeURIComponent(
+    'Niva Bupa Health Insurance Testimonial'
+  )}`;
+
+  // Android Chrome Intent: directly targets LinkedIn app package com.linkedin.android without showing any modal,
+  // falling back to web Create Post if the LinkedIn app is not installed.
+  const androidIntentUrl = `intent://www.linkedin.com/shareArticle?mini=true&url=${encodedShareUrl}&summary=${encodedMessage}#Intent;package=com.linkedin.android;scheme=https;S.browser_fallback_url=${encodeURIComponent(
     webFallbackUrl
   )};end;`;
 
-  // iOS LinkedIn custom URL scheme
-  const iosSchemeUrl = 'linkedin://';
+  // iOS LinkedIn URL scheme / Universal Link
+  const iosSchemeUrl = mobileDirectUrl;
 
   if (typeof window === 'undefined' || typeof navigator === 'undefined') {
     return {
@@ -115,6 +124,7 @@ export function getLinkedInShareUrls(shareUrl: string, message: string): LinkedI
       isAndroid: false,
       androidIntentUrl,
       iosSchemeUrl,
+      mobileDirectUrl,
       webFallbackUrl,
     };
   }
@@ -134,6 +144,7 @@ export function getLinkedInShareUrls(shareUrl: string, message: string): LinkedI
     isAndroid,
     androidIntentUrl,
     iosSchemeUrl,
+    mobileDirectUrl,
     webFallbackUrl,
   };
 }
